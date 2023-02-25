@@ -205,7 +205,7 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
   + Sublime Text: https://www.sublimetext.com/download
   + PyCharm: https://www.jetbrains.com/pycharm/download/#section=mac
 *** Prompt
-- Successfully open the `hello.py` file nested under coding/python-testing that was created in Project 1
+- Successfully open the ~hello.py~ file nested under coding/python-testing that was created in Project 1
 - Add the following to the file:
   #+begin_src python :results output
     print("Hello World!") # This is my first line of Python code!!!
@@ -264,15 +264,20 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
 - Elements can very easily be added to the end of lists as well, making it a very good way to
   dynamically store and access data quickly. 
 #+begin_src python :results output
-      a_list=[1, "2", 3.0] # this is a list, it can be made up of a combination of any of the variable types
+      a_list=[1, "2", 3.0] 
+      # this is a list, it can be made up of a combination of any of the variable types
 
-      print("At index {}, retrieved {} which is type: {}".format(0, a_list[0], type(a_list[0]))) # the [] after the list name indicates what index (spot in the list) that you want to access
-      print("At index {}, retrieved {} which is type: {}".format(1, a_list[1], type(a_list[1]))) # the index always starts at 0 so the length of the list is n-1
-      print("At index {}, retrieved {} which is type: {}\n".format(2, a_list[2], type(a_list[2]))) # the \n at the end of the string tells the computer to add another line underneath the text
+      print("At index {}, retrieved {} which is type: {}".format(0, a_list[0], type(a_list[0]))) 
+      # the [] after the list name indicates what index (spot in the list) that you want to access
+
+      print("At index {}, retrieved {} which is type: {}".format(1, a_list[1], type(a_list[1]))) 
+      # the index always starts at 0 so the length of the list is n-1
+      
+      print("At index {}, retrieved {} which is type: {}\n".format(2, a_list[2], type(a_list[2])))
+      # the \n at the end of the string tells the computer to add another line underneath the text
 
       # You can also use the contents of the list to find its own index, for example:
       index_of_two=a_list.index("2") # .index() is used to find the index of an element on a list
-
       print("{} is the index location for {} in the list".format(index_of_two, "2"))
 
       # Lastly, you can append elements to the end of the list, for example:
@@ -301,15 +306,19 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
   Additionally, sets are unorded so you will not be able to find the index based on a specific element like in a list.
 - Sets, like lists, are *mutable* meaning that you can add or remove items from it after its creation.
 #+begin_src python :results output
-  a_set=set([1, 2, 3, 4, 5, 1]) # This line shows a list being converted to a set which is how sets are created 99.99% of the time
+  a_set=set([1, 2, 3, 4, 5, 1]) 
+  # This line shows a list being converted to a set which is how sets are created 99.99% of the time
 
-  print(a_set) # This will automatically remove the excess 1
+  print(a_set)
 
   # As with the list, add/append items to the end of the set or remove any element in the set
-  a_set.add(6) # the .add() command replaces the .append() command that is used in lists
+  a_set.add(6) 
+  # the .add() command replaces the .append() command that is used in lists
   print("\nThis is the set after 6 was added: ", a_set)
+  
   a_set.remove(1)
   print("This is the set after 1 was removed: ", a_set)
+  
   length_of_set=len(a_set)
   print("The length of the set: ", length_of_set)
 #+end_src
@@ -354,23 +363,28 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
   person = {"name": "John", "age": 32, "gender": "Male"}
 
   # Accessing elements of a dictionary
-  print("Name in dictionary: ",person.get("name"))  # This method of accessing the value of a key is most used and safest because it will not raise an ERROR if key does not exist it will simply return NONE
-  # for example
-  print("Address in dictionary: ",person.get("address")) # This will return/print a value of None because "address" is not a key in this dictionary
+  print("Name in dictionary: ",person.get("name"))  
+  # This method of accessing the value of a key is most used and safest 
+  # It will not raise an ERROR if key does not exist it will simply return NONE, example:
+  print("Address in dictionary: ", person.get("address")) 
+  # This will return/print a value of None because "address" is not a key in this dictionary
 
-  print("Age in dictionary: ",person["age"])  # This is the other way to access the value of a key in a dictionary
+  print("Age in dictionary: ",person["age"])  
+  # This is the other way to access the value of a key in a dictionary
 
   # Updating elements of a dictionary
   person["age"] = 33
   print("Updated age: ",person.get("age"))  # Output: 33
 
   # Adding elements to a dictionary
-  person["address"] = "123 Main St" # this will check if there is a key called "address" and update its value, or, if "address" does not exist, it will create it and add the value
+  person["address"] = "123 Main St" 
+  # this will check if there is a key called "address" and update its value
+  # if "address" does not exist, it will create it and add the value
 
   # Removing elements from a dictionary
   del person["age"]
 
-  # Iterating over a dictionary, the method of ITERATING will be covered next so do not fret over the details as of now
+  # Iterating over a dictionary, the method of ITERATING will be covered next
   # For now it is important to know that .items() will return both the key and the value
   # .keys() will return a list of just the keys
   # and .values() will return a list of just the values
@@ -399,14 +413,20 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
   done with what has already been taught.
 #+begin_src python :results output
     board=[[1,2,3],[4,5,6],[7,8,9]] # this is simply a a 3x3 board
+    
+    # this iterates through the first list (which has three elements that each is a list)
+    for row in board:
 
-    for row in board: # this iterates through the first list (which has three elements that each is a list)
-      for num in row: # this iterates through the second list (which has three elements)
-	print(" ---",end="") # formatting, the end="" just keeps python printing the next print() on the same line
+      # this iterates through the second list (which has three elements)
+      for num in row: 
+        print(" ---",end="") 
+        # formatting, the end="" just keeps python printing the next print() on the same line
+      
       print()
       for num in row: # same as above for loop
 	print("| {} ".format(num), end="")
       print("|")
+    
     for i in range(3): # repeats below task three times
       print(" ---", end="")
 #+end_src
@@ -422,10 +442,10 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
 
 *** If Statements
 - If statements are ways to check variables against others or a preset value
-  - They can be compared by !=, ==, <, >, <=, >= (or `in` if you are comparing a value to elements in a list)
-    - Add `not` right after `if` to get the opposite of the comparisons
-  - To link multiple comparisons in a row, the first `if` can be followed by `elif`
-  - To get everything that does not fit into the initial `if` statement, follow it with `else`
+  - They can be compared by !=, ==, <, >, <=, >= (or ~in~ if you are comparing a value to elements in a list)
+    - Add ~not~ right after ~if~ to get the opposite of the comparisons
+  - To link multiple comparisons in a row, the first ~if~ can be followed by ~elif~
+  - To get everything that does not fit into the initial ~if~ statement, follow it with ~else~
 #+begin_src python :results output
   for x in [1,2,3,4]: # Loop through a list to get each element
     if (x % 2) == 0: # check if the remainder of the element divided by 2 is 0
@@ -455,7 +475,7 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
   def greet(name): # the `def` statement must fall BEFORE the function is called otherwise Python won't know what to call
     """
     This function greets the person passed in as a parameter.
-    Description of a function usually falls immediately below the `def` statement
+    Description of a function usually falls immediately below the ~def~ statement
     and is enclosed in triple quotes as you can see in this example.
     """
     print("Hello, " + name + ". How are you today?")
@@ -512,9 +532,10 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
 #+begin_src python :results output
   # Example of 3: Short Anonymous Functions (anonymous because it technically doesn't have a name)
 
-  sum = lambda x, y : x + y # extremely short function, would've taken up much more room as a full blown function
+  sum = lambda x, y : x + y 
+  # extremely short function, would've taken up much more room as a full blown function
 
-    # Use the lambda function
+  # Use the lambda function
   print("The sum is:", sum(10, 20))
 #+end_src
 
@@ -534,9 +555,11 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
 #+begin_src python :results output
 import random 
 
-random_number = random.randint(1, 10) # Generate a random integer between 1 and 10 (inclusive)
+random_number = random.randint(1, 10) 
+# Generate a random integer between 1 and 10 (inclusive)
 
-print(f"The randomly generated number is: {random_number}") # Print the random number
+print(f"The randomly generated number is: {random_number}") 
+# Print the random number
 
 #+end_src
 
@@ -603,92 +626,96 @@ guessTheNumber()
 ** Installation
 This installation guide will specically be for Macs. For other devices, check [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
    - [Homebrew](https://brew.sh/) is required for the following steps
-     + Check if brew is on your computer: `brew -v`
+     + Check if brew is on your computer: ~brew -v~
      + If command not found, run:
-      ```
-      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-      ``
+#+begin_src shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#+end_src
+
 1. Create GitHub or GitLab account (GitHub is my personal choice)
+
 2. Add SSH key to your account
    + Create private/public key pair
-     ```
-     cd ~/.ssh
-     ssh-keygen -t ed25519 -C "comment"
-     ```
-     - It will prompt you for what file name to put it into, write `personal`
-   + Copy the contents of the `personal.pub` file
-     ```
-     cat ~/.ssh/personal.pub
-     ```
+#+begin_src shell
+cd ~/.ssh
+ssh-keygen -t ed25519 -C "comment"
+#+end_src
+
+     - It will prompt you for what file name to put it into, write ~personal~
+     - It will also ask for a password, it is not necessary to add one
+   + Copy the contents of the ~personal.pub~ file
+#begin_src shell
+cat ~/.ssh/personal.pub
+#+end_src
+
    + Add to account
-     - Navigate to account settings, then find `SSH Keys` in menu on left
-       + If GitHub click `Add new`
-     - Paste the contents of `personal.pub` into the `Key` section
-     - Add anything to `Title` section (ie. Personal Computer)
-     - `Usage type` should be default
+     - Navigate to account settings, then find /SSH Keys/ in menu on left
+       + If GitHub click /Add new/
+     - Paste the contents of ~personal.pub~ into the /Key/ section
+     - Add anything to /Title/ section (ie. Personal Computer)
+     - /Usage type/ should be default
      - If GitLab, don't set an expiration date
-     - Click `Add` and you're done, you have created your first SSH key!
-3. Install git
-   ```
-   brew install git
-   ```
-4. Check if git was properly installed
-   ```
-   git -v
-   ```
+     - Click /Add/ and you're done, you have created your first SSH key!
+
+3. Install git: ~brew install git~
+
+4. Check if git was properly installed: ~git -v~
+
 5. Edit git configuration file
-   - Add the email and username to `.gitconfig`
-     + Open file `~/.gitconfig` in text editor of choice then add:
-     ```
-     [user]
-       name = <github/lab username>
-       email = <email used to create github/lab account>
-     ```
-6. Check to see if your email and name were added
-   ```
-   git config -l
-   ```
+   - Add the email and username to *.gitconfig*
+     + Create file *~/gitconfig*
+#+begin_src shell
+touch ~/.gitconfig
+#+end_src
+     + Open file in text editor of choice then add:
+#+begin_src text
+[user]
+    name = <github/lab username>
+    email = <email used to create github/lab account>
+#+end_src
+
+6. Check to see if your email and name were added: ~git config -l~
 All set!!
 
 ** Git Command
 - The following are written in the order that they are most likely to be used when
   going through the basic flow of a project. Some of them are used far more often
-  than others. All these commands follow the `git` command and a space.
-  The most commonly used ones will be *emphasized*.
+  than others. All these commands follow the ~git~ command and a space.
+  The most commonly used ones will be marked as *KEY*.
    
-+ NOTE: There are many more uses for the `git` command but these are the key ones
++ NOTE: There are many more uses for the ~git~ command but these are the key ones
 
-1. clone {url, ssh}
+1. ~clone {url, ssh}~
    - creates a directory named after the online repo along with the files
      from a GitHub or GitLab repo that is linked to the online repository
-2. init
+2. ~init~
    - used to initialize a repository (adds .git file to repo)
-3. remote {add, -v, remove, ...}
+3. ~remote {add, -v, remove, ...}~
    - add origin {url}: links the files to an online GitHub or GitLab repo
      + NOTE: this connection is necessary to use all the below commands
      + NOTE: connection automatically created with `git clone {url}`
    - -v: lists the remote connections
    - remove: connetion is terminated from the local to online repository
-4. *add* {file-name, .}
+4. *KEY* ~add {file-name, .}~
    - <file-name>: add specific edited file name to staging
    - .: add ALL edited files to staging
-5. status
+5. ~status~
    - checks to see if files are in staging (green text)
-6. branch {blank, branch-name}
-   - blank: no text after `branch` will list all branches plus which one
+6. ~branch {blank, branch-name}~
+   - blank: no text after ~branch~ will list all branches plus which one
             is currently being used
    - <branch-name>: create a new branch (used for major changes to not affect <main> branch)
-7. checkout {blank, branch-name}
+7. ~checkout {blank, branch-name}~
    - blank: checks to see if current branch is up to date with remote repo
    - <branch-name>: switches the branch being used
-8. *commit* -m "Add Message Here"
+8. *KEY* ~commit -m "Add Message Here"~
    - adds the staged files to the commit history along with a message
      explaining what the edited files are
-9. log
+9. ~log~
    - shows the commit history
-10. *push*
+10. *KEY* ~push~
     - exports the committed changes to the remote repository
-11. merge {branch-name}
+11. ~merge {branch-name}~
     - combines the <main> branch with the changes from <branch-name>
 
 ** Project 4
@@ -696,13 +723,13 @@ All set!!
 This project will take you through uploading Project 3 to a remote repository!
 
 Out of terminal steps: (GitHub will be the assumed choice)
-- Go to your GitHub page (ie. https://github.com/<username>
-- Click on the `Repositories` tab then click `New`
+- Go to your GitHub page (ie. https://github.com/<username>)
+- Click on the /Repositories/ tab then click /New/
 - No template will be used
 - Name the project and add a description
 - Set it to private (or public)
-- *Do not* add a README file from this page. It will make things very complicated.
-- Leave everything else as the default and click `Create repository`
+- *Do not* add a ~README~ file from this page. It will make things very complicated.
+- Leave everything else as the default and click /Create repository/
   
 Terminal steps: (not as specific)
 - Initialize project 3 directory
@@ -713,12 +740,12 @@ Terminal steps: (not as specific)
 - *OPTIONAL* Check your commit history in terminal
 - Reload the page to see the added files!
 *** Answer
-Given based on GitHub solution (GitLab would have a slightly different link at the `git remote` stage)
+Given based on GitHub solution (GitLab would have a slightly different ssh url at the ~git remote~ stage)
 #+begin_src shell
   cd ~/coding/python-testing # move to the correct repository
 
   git init # initialize the git commands inside the local repository
-  git remote add origin git@github.com:<username>/<project-name>.git # add remote connection to specific repository
+  git remote add origin <ssh url to remote repo> # add remote connection to specific repository
   touch README.md # create README file
   vim README.md # use text editor of choice
   git checkout main # make sure you are on the <main> branch
@@ -726,7 +753,6 @@ Given based on GitHub solution (GitLab would have a slightly different link at t
   git commit -m "Adding files to my first remote repository" # add changes to commit history
   git push # files sent to server
   git log # check commit history
-
 #+end_src
 
 * TODO Level 5: Learning How to Learn
