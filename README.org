@@ -91,20 +91,7 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
     - python-testing
       - hello.py
 *** Answer
-Terminal:
-#+begin_src shell
-  cd
-  mkdir coding
-  cd coding
-  mkdir python-testing
-  cd python-testing
-  touch hello.py
-  ls -l
-#+end_src
-
-#+RESULTS:
-| total      | 0 |                  |       |   |     |    |       |          |
-| -rw-r--r-- | 1 | michaelmontanaro | staff | 0 | Jan | 31 | 20:50 | hello.py |
+Terminal commands found in [[./project1.sh][project1.sh]]
 
 * Level 2: Integrated Development Environments (IDEs)
 - To start, a text editor is exactly what it sounds like: a program/application that allows you to edit text.
@@ -215,7 +202,7 @@ print("Hello World!") # This is my first line of Python code!!!
 #+RESULTS:
 : Hello World!
 
-- Try and run the code!
+- Try and run the code! Your hello.py file should resemble [[./project2.py][project2.py]]
 **** Extra Credit:
   + If you used an application to write that code, try to remove the "!" using one of the terminal-based text editors.
     It is important to learn how to use the basic functionality of both.
@@ -713,7 +700,7 @@ All set!!
 This project will take you through uploading Project 3 to a remote repository!
 
 Out of terminal steps: (GitHub will be the assumed choice)
-- Go to your GitHub page (ie. https://github.com/<username>)
+- Go to your GitHub page (ie. https://github.com/your_username_here)
 - Click on the /Repositories/ tab then click /New/
 - No template will be used
 - Name the project and add a description
@@ -731,20 +718,7 @@ Terminal steps: (not as specific)
 - Reload the page to see the added files!
 *** Answer
 Given based on GitHub solution (GitLab would have a slightly different ssh url at the ~git remote~ stage)
-Terminal:
-#+begin_src shell
-  cd ~/coding/python-testing # move to the correct repository
-
-  git init # initialize the git commands inside the local repository
-  git remote add origin <ssh url to remote repo> # add remote connection to specific repository
-  touch README.md # create README file
-  vim README.md # use text editor of choice
-  git checkout main # make sure you are on the <main> branch
-  git add .     # add all files to staging
-  git commit -m "Adding files to my first remote repository" # add changes to commit history
-  git push # files sent to server
-  git log # check commit history
-#+end_src
+Terminal commands found in [[./project4.sh][project4.sh]]
 
 * TODO Level 5: Learning How to Learn
 * Level 6: Main Python Project
