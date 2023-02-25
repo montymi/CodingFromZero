@@ -512,7 +512,7 @@ greet("John")
      
 + NOTE: it is not necessary to understand each of these examples, just knowing it exists will be helpful in the future
 #+begin_src python :results output
-  # Example of 1: Map/Filter Functions
+  # Example 1: Map/Filter Functions
   
   numbers = [1, 2, 3, 4, 5]
 
@@ -527,7 +527,7 @@ greet("John")
 : Squared numbers: [1, 4, 9, 16, 25]
 
 #+begin_src python :results output
-  # Example of 2: Sorting
+  # Example 2: Sorting
 
   # A list of tuples representing (name, age)
   people = [("Alice", 32), ("Bob", 40), ("Charlie", 25)]
@@ -543,7 +543,7 @@ greet("John")
 : People sorted by age: [('Charlie', 25), ('Alice', 32), ('Bob', 40)]
      
 #+begin_src python :results output
-  # Example of 3: Short Anonymous Functions (anonymous because it technically doesn't have a name)
+  # Example 3: Short Anonymous Functions (anonymous because it technically doesn't have a name)
 
   sum = lambda x, y : x + y 
   # extremely short function, would've taken up much more room as a full blown function
