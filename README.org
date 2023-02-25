@@ -1,0 +1,735 @@
+
+#+title: Getting Started with Code
+#+subtitle: Welcome to the Rabbit Hole
+#+author: Michael Montanaro
+#+description: The guide I wish was around when I was getting started with coding.
+#+startup: show2levels
+#+date: <2023-01-31 Tue>
+#+last-edited: <2023-02-25 Sat>
+
+* Level 1: Terminal
+Your terminal/shell is the center for everything in programming. Below is a brief overview of what it is; however, don't get too caught up in the details.
+The main goal of this level is to introduce you to some concepts and vocab, but everything that is "need to know" is found in *Project 1*.
+It is your computer if not for the GUI (ie. apps), everything you see on your screen can be found in the terminal.
+There are many "flavors" of languages used to navigate the shell, most notably: zsh, bash, fish, and shell. However, they are all fairly similar.
+
+Any code run on your computer, in any location, is run through a terminal. This includes the IDE shells, more about that later.
+Navigating through the shell to reach certain directories (folders) and edit/run files take few commands, but the terminal is extremely powerful and useful.
+
+Advanced use of the terminal can allow for quick searches through entire directory paths.
+An example of which is if you start a search at the $PATH or the base of your computer, it will search every file in your computer.
+That knowledge will come with time, for now, you will focus on terminology and then a few minor commands.
+
+** Terminology
+- directory = folder
+  - parent = first/main folder
+  - child = folders after parent
+    - (1,2,3...n)th child = how many levels deep into the parent directory the child is
+      
+- command line (CLI) = location to input commands to the terminal
+  
+- text editor = tool used to edit a file (people are *very* passionate about their editor)
+
+- argument = something that is passed to a command to change its behavior
+  
+- $HOME = variable showing where the parent directory for a given user is, commonly known as the *root* directory
+  - ex. my $HOME variable would be `Users/michaelmontanaro/`
+    
+- $PATH = variable that shows where to find all *external* commands that might need to be run from the terminal (such as any coding language)
+
+- $SHELL = variable that stores the current shell scripting language (as mentioned above) being used in the terminal
+  
+** Key Commands
+If (argument) is in definition of a command, any nested text will be the possible thing to add after a space is put between the command and the argument
+If (TC) is in definiction of a command, then the (argument) of the command can be filled or listed using the <TAB> key
+To learn more about any of these commands type `man` (for manual) followed by the command or type the command followed by --help. To exit the screen that pops up, type "q".
+
+- pwd = print working/current directory, it shows which folder you are in
+
+- cd = change directory (argument), move to a different directory
+  - /no argument/ = go back to $HOME (root) directory
+  - .. = go back *one* folder
+  - folder_name = go up to given folder (<TAB> will show all possible folder options)
+
+- mkdir = make a directory/folder (argument)
+  - folder_name = name of folder to be created, avoid spaces so use either - or _ to combine words
+
+- ls = list contents of directory (argument)
+  - ls -a = show hidden files (anyting starting with a ".") as well
+  - ls -l = make everything neater and in a list
+  - ls -la = combination of both above commands (*used most often*)
+
+- vi, vim, or nano = terminal based text editors (argument) (TC)
+  - name_of_file = opens that file for editing if it exists, creates a new file if it does not
+
+- cat = prints out the contents of a file (argument) (TC)
+  - name_of_file = file whose contents will be outputted
+
+- touch = create a file without opening it (argument)
+  - name_of_file = file to be created
+
+- open = opens a file in prefered application (argument)
+  - name_of_file = opens file in prefered GUI text editor or the TextEdit application
+  - url = opens the webpage in prefered browser
+
+- echo = print argument to terminal (argument)
+  -"text" = prints text to terminal
+  -variable = prints variable (such as contents of $HOME, $PATH, $SHELL) to terminal
+
+- grep = *ADVANCED* searches a file or directory
+
+- | = *ADVANCED* puts the output of one command into another
+
+** Project 1
+This project will introduce you to the basics of using your terminal to naviagate your computer, create files, and run CLI commands.
+*** Prompt
+Create a folder, named `coding`, under the root directory, and then create a folder called `python-testing` in that folder.
+Lastly, create a file called `hello.py` in the `python-testing` folder and then list the contents of the `python-testing` folder. The python file should be the 3rd child of the root directory.
+**** Hint
+- $HOME
+  - coding
+    - python-testing
+      - hello.py
+*** Answer
+#+begin_src shell
+  cd
+  mkdir coding
+  cd coding
+  mkdir python-testing
+  cd python-testing
+  touch hello.py
+  ls -l
+#+end_src
+
+#+RESULTS:
+| total      | 0 |                  |       |   |     |    |       |          |
+| -rw-r--r-- | 1 | michaelmontanaro | staff | 0 | Jan | 31 | 20:50 | hello.py |
+
+* Level 2: Integrated Development Environments (IDEs)
+- To start, a text editor is exactly what it sounds like: a program/application that allows you to edit text.
+  Sometimes, especially when programming, the ability to edit text is not enough to create an efficient work environment.
+  This is where Integrated Development Environments come in, because they add some key features that are necessary in software development.
+  Most IDEs also allow for customizability with a plethora of plugins or editable configurations, but that will come with time.
+  For now, picking a simple IDE that contains the necessary features to begin your coding journey is all that you will need for this course.
+** Applications
+*** Visual Studio Code
+- (aka VS Code) My personal choice for application based IDE. It is open-source code editor developed by Microsoft.
+  It is a modern, feature-rich code editor that is suitable for a wide range of programming languages and platforms.
+
+- The main *goal* of VS Code is customizability, which allows the user to create a completely unique work environment
+  with a very small learning curve because of its modern, clean, and organized user interface.
+**** Pros
+- Wide range of extensions and plugins
+- IntelliSense feature for smart code completion
+- Multi-platform support (Windows, macOS, Linux)
+- Multi-language support
+- Built-in terminal
+- Source control integration
+- Debugging tools
+**** Cons
+- Slower than other options
+- Can become fairly computer resource intensive (depending on how many plugins)
+*** Sublime Text
+- My first ever IDE. It focuses on performance which makes it a lot faster and more lightweight than VS Code.
+  Similar, but less extensive, customizability options to VS Code.
+- The main *goal* of Sublime Text is performance coupled with a minimalist interface, removing distractions and allowing for a clean work environment.
+**** Pros
+- Small learning curve
+- User-friendly interface
+- Very little distractions
+- Easily installed pacakges
+- Fast performance
+- UI customization
+- Multi-line selection
+**** Cons
+- Smaller package pool
+- Less built in features
+- Not too commonly used anymore
+*** PyCharm
+- Never personally used, but used by many colleagues. To put it simply, PyCharm is VS Code but optimized to function at the speed of Sublime Text.
+  Although this may sound ideal, it is rare that you code in one language for your entire career. This means that most PyCharm programmers have to use
+  language specific IDEs, slowing down work flow and rendering the customizability of PyCharm useless.
+- The main *goal* of PyCharm is to create a work environment specialized for writing, editing, and debugging Python code.
+**** Pros
+- User-friendly interface
+- Intelligent code completion
+- Code inspection/highlighting
+- Version control integration
+- Debugging tools
+**** Cons
+- Python specific
+- Some features only available in PRO version
+- Steep learning curve
+- Limited customizability
+- Resource intensive
+** Terminal Based
+*** Vim
+- Vim is a highly configurable text editor that is widely used by developers and system administrators.
+  It is known for its modal interface, which allows users to perform editing tasks efficiently with a minimal number of keystrokes.
+  Vim was built off of another text editor known was `vi`, and vim has now been built upon as well, with a text editor called `neovim`.
+  Vi is fairly old and does not release any new features, while Vim is a very stable release with no bugs and is very slow to add features.
+  Neovim is like the young genius, always trying to implement new features but not the safest in terms of stability as the features may
+  have the occasional bug (although this is very rare and would not harm the computer).
+- If you were to choose any flavor of vim as your IDE, I would personally send you a configuration file to fix its rather plain
+  user-interface and lack of packages, since, out of box, vim is simply a text editor and must be turned into an IDE.
+**** Pros
+- Large community
+- Customizability
+- Efficient and fast
+- Cross platform compatibility
+- Can be turned into a full fledge IDE
+- Key bindings increase productivity
+**** Cons
+- Steep learning curve
+- Limited built-in features (out of box)
+*** Nano
+- Nano is a simple, easy-to-use text editor that is widely used on Unix-like systems, including Linux and macOS.
+  This means that it should (along with vi) be installed on almost every computer/server that you might use, except Windows but everyone hates windows.
+  It is known for its user-friendly interface, which makes it accessible for users who are new to the command line.
+- This is by FAR the easiest option, but it is also the worst option. It is very good for beginners but quickly grown out of.
+**** Pros
+- Small learning curve
+- Cross-platform compatibility
+- Built-in help
+- Commands printed on screen
+- Small and lightweight
+**** Cons
+- Limited features
+- Little to no customization
+- Small community
+** Project 2
+- Download/install any of the above options
+  - If you want to use the terminal-based text editors, message me so I can get it set up for you
+- Links to downloads:
+  + VS Code: https://code.visualstudio.com/download
+  + Sublime Text: https://www.sublimetext.com/download
+  + PyCharm: https://www.jetbrains.com/pycharm/download/#section=mac
+*** Prompt
+- Successfully open the `hello.py` file nested under coding/python-testing that was created in Project 1
+- Add the following to the file:
+  #+begin_src python :results output
+    print("Hello World!") # This is my first line of Python code!!!
+  #+end_src
+  #+RESULTS:
+  : Hello World!
+- Try and run the code!
+**** Extra Credit:
+  + If you used an application to write that code, try to remove the "!" using one of the terminal-based text editors.
+    It is important to learn how to use the basic functionality of both.
+* Level 3: Python
+** Variables
+- The storage of data in easily usable words known as variables.
+*** Strings, Integers, and Floats
+- In python, there are three main types of variables: strings, integers, and floats.
+  - *Important* if you are to quote something in a string, you must use the opposite of the quote you are using
+    to signify that it is a string. So, for example, if I am making a sentence a string I would do:
+    "this is a string, Michael said". However, if I want the first part to be a quote, I must use single quotes instead.
+    So it would become: "'this is a string', Michael said".
+#+begin_src python :results output
+  # Before we start, the line you are currently reading is a comment, which is NOT read by the computer
+  '''
+  Therefore, comments can be used as notes to self or other programmers in order to better understand what things do.
+  This text right here a multi-line quote, set off by the three single quotes and enclosed by three single quotes as well.
+  Multi-line comments are also not read by the computer and very useful at the beginning of programs for full project explanation if necessary.
+  '''
+
+  string="word" # a string is basically anything in quotes so "a", "word", "or a sentence or even", "1" are all strings
+  integer=1 # an integer is any whole number so -2, -1, 0, 1, 2 are all integers 
+  a_float=1.2 # a float is any non-whole number so any number with a decimal, meaning 0.1, 1.1, 1.11, 11.11 are all floats
+
+  print("{} is type: {}".format(string, type(string)))
+  print("{} is type: {}".format(integer, type(integer)))
+  print("{} is type: {}".format(a_float, type(a_float)))
+
+  # Important example talked about above
+  print("'This is a string', Michael said")
+
+  '''
+  Integers and floats can have mathmatical operations done on them such as +,-,/,*
+  A coding specific one is modulus (%) which gets just the *remainder* of division
+  For example, to check if a number is even, you could do num % 2 and if it returns 0 it is even
+  '''
+#+end_src
+
+#+RESULTS:
+: word is type: <class 'str'>
+: 1 is type: <class 'int'>
+: 1.2 is type: <class 'float'>
+: 'This is a string', Michael said
+
+*** Lists
+- There are many ways to store the above variable types, one of which being a list.
+  A list is an indexed storage system that allows you to access everything in it either via its spot in the list,
+  which starts with the number zero and goes to the number of elements in the list minus one.
+- Elements can very easily be added to the end of lists as well, making it a very good way to
+  dynamically store and access data quickly. 
+#+begin_src python :results output
+      a_list=[1, "2", 3.0] # this is a list, it can be made up of a combination of any of the variable types
+
+      print("At index {}, retrieved {} which is type: {}".format(0, a_list[0], type(a_list[0]))) # the [] after the list name indicates what index (spot in the list) that you want to access
+      print("At index {}, retrieved {} which is type: {}".format(1, a_list[1], type(a_list[1]))) # the index always starts at 0 so the length of the list is n-1
+      print("At index {}, retrieved {} which is type: {}\n".format(2, a_list[2], type(a_list[2]))) # the \n at the end of the string tells the computer to add another line underneath the text
+
+      # You can also use the contents of the list to find its own index, for example:
+      index_of_two=a_list.index("2") # .index() is used to find the index of an element on a list
+
+      print("{} is the index location for {} in the list".format(index_of_two, "2"))
+
+      # Lastly, you can append elements to the end of the list, for example:
+      a_list.append("added")
+      print("This is the list after 'added' was appended to the end of the list: ", a_list)
+      # You can also remove elements of the list
+      a_list.remove('2')
+      print("This is the list after '2' was removed from the list: ", a_list)
+      # You can also get the length of the list (as well as every variable type in python so this next command is very helpful)
+      length_of_list=len(a_list)
+      print("The length of the list after an element was added is: ", length_of_list)
+#+end_src
+
+#+RESULTS:
+: At index 0, retrieved 1 which is type: <class 'int'>
+: At index 1, retrieved 2 which is type: <class 'str'>
+: At index 2, retrieved 3.0 which is type: <class 'float'>
+: 
+: 1 is the index location for 2 in the list
+: This is the list after 'added' was appended to the end of the list:  [1, '2', 3.0, 'added']
+: This is the list after '2' was removed from the list:  [1, 3.0, 'added']
+: The length of the list after an element was added is:  3
+
+*** Sets
+- A set is very similar to that of a list, and has all the same functionality except for the fact that it cannot hold duplicates.
+  Additionally, sets are unorded so you will not be able to find the index based on a specific element like in a list.
+- Sets, like lists, are *mutable* meaning that you can add or remove items from it after its creation.
+#+begin_src python :results output
+  a_set=set([1, 2, 3, 4, 5, 1]) # This line shows a list being converted to a set which is how sets are created 99.99% of the time
+
+  print(a_set) # This will automatically remove the excess 1
+
+  # As with the list, add/append items to the end of the set or remove any element in the set
+  a_set.add(6) # the .add() command replaces the .append() command that is used in lists
+  print("\nThis is the set after 6 was added: ", a_set)
+  a_set.remove(1)
+  print("This is the set after 1 was removed: ", a_set)
+  length_of_set=len(a_set)
+  print("The length of the set: ", length_of_set)
+#+end_src
+
+#+RESULTS:
+: At index 0, retrieved 1 which is type: <class 'int'>
+: At index 1, retrieved 2 which is type: <class 'str'>
+: At index 2, retrieved 3.0 which is type: <class 'float'>
+: 
+: 1 is the index location for 2 in the list
+: This is the list after 'added' was appended to the end of the list:  [1, '2', 3.0, 'added']
+: This is the list after '2' was removed from the list:  [1, 3.0, 'added']
+: The length of the list after an element was added is:  3
+
+*** Tuple
+- A tuple is an ordered, immutable (meaning it cannot be modified) collection of elements.
+  They are useful when you want to group data together that will remain constant throughout the code.
+- Tuples are not too commonly used except for very specific use cases. They are creatd by enclosing data with () instead of [] like with a list.
+#+begin_src python :results output
+  a_tuple=("John", 32, "Male") # this creates the tuple
+
+  name, age, gender = a_tuple # each element, in order, is put into its respective variable from the tuple
+  print("The elements of the tuple include: ", name, age, gender)
+  print("The element in the first index of the tuple is: ", a_tuple[0]) # tuples also support indexing (similar to lists)
+#+end_src
+
+#+RESULTS:
+: The elements of the tuple include:  John 32 Male
+: The element in the first index of the tuple is:  John
+
+*** Dictionary
+- A dictionary is a collection of key-value pairs, where each key is completey unique to each other.
+  They are mutable, meaning they are able to be edited in ways like adding, removing, and updating elements
+  of the dictionary like just a value, just a key, or even both at once.
+  They are unordered, so they cannot be accessed through indexing.
+- The elements of a dictionary can be anything including integers, floats, strings, etc...
+- Dictionaries are extremely common and used in most every project that I have worked on. They are a useful
+  way to have a structured grouping of data that can be accessed with ease and clarity.
+
+#+begin_src python :results output
+  # Creating a dictionary
+  person = {"name": "John", "age": 32, "gender": "Male"}
+
+  # Accessing elements of a dictionary
+  print("Name in dictionary: ",person.get("name"))  # This method of accessing the value of a key is most used and safest because it will not raise an ERROR if key does not exist it will simply return NONE
+  # for example
+  print("Address in dictionary: ",person.get("address")) # This will return/print a value of None because "address" is not a key in this dictionary
+
+  print("Age in dictionary: ",person["age"])  # This is the other way to access the value of a key in a dictionary
+
+  # Updating elements of a dictionary
+  person["age"] = 33
+  print("Updated age: ",person.get("age"))  # Output: 33
+
+  # Adding elements to a dictionary
+  person["address"] = "123 Main St" # this will check if there is a key called "address" and update its value, or, if "address" does not exist, it will create it and add the value
+
+  # Removing elements from a dictionary
+  del person["age"]
+
+  # Iterating over a dictionary, the method of ITERATING will be covered next so do not fret over the details as of now
+  # For now it is important to know that .items() will return both the key and the value
+  # .keys() will return a list of just the keys
+  # and .values() will return a list of just the values
+  print("Each key, value pair in the dictionary after removing 'age': ")
+  for key, value in person.items():
+    print("\t",key, value) # the \t inserts a tab
+#+end_src
+
+#+RESULTS:
+: Name in dictionary:  John
+: Address in dictionary:  None
+: Age in dictionary:  32
+: Updated age:  33
+: Each key, value pair in the dictionary: 
+: 	 name John
+: 	 gender Male
+: 	 address 123 Main St
+
+** For Loops and If Statements
+*** For Loops
+- For loops are simply a way to remove redundent/repetitive code by having it run X number of times.
+  They also allow users to easily iterate through iterable objects, such as lists, sets, and dictionaries.
+- The functionality of these loops can become quite advanced, with the for loops being nested within lists that
+  also include if statements. However, although it is good to know that it exists, that nesting only acts in
+  reducing the number of lines that a code takes. It doesn't help with speed or unlock any features that cannot be
+  done with what has already been taught.
+#+begin_src python :results output
+    board=[[1,2,3],[4,5,6],[7,8,9]] # this is simply a a 3x3 board
+
+    for row in board: # this iterates through the first list (which has three elements that each is a list)
+      for num in row: # this iterates through the second list (which has three elements)
+	print(" ---",end="") # formatting, the end="" just keeps python printing the next print() on the same line
+      print()
+      for num in row: # same as above for loop
+	print("| {} ".format(num), end="")
+      print("|")
+    for i in range(3): # repeats below task three times
+      print(" ---", end="")
+#+end_src
+
+#+RESULTS:
+:  --- --- ---
+: | 1 | 2 | 3 |
+:  --- --- ---
+: | 4 | 5 | 6 |
+:  --- --- ---
+: | 7 | 8 | 9 |
+:  --- --- ---
+
+*** If Statements
+- If statements are ways to check variables against others or a preset value
+  - They can be compared by !=, ==, <, >, <=, >= (or `in` if you are comparing a value to elements in a list)
+    - Add `not` right after `if` to get the opposite of the comparisons
+  - To link multiple comparisons in a row, the first `if` can be followed by `elif`
+  - To get everything that does not fit into the initial `if` statement, follow it with `else`
+#+begin_src python :results output
+  for x in [1,2,3,4]: # Loop through a list to get each element
+    if (x % 2) == 0: # check if the remainder of the element divided by 2 is 0
+      print("Even Found")
+    else:            # anything that is not even is odd
+      print("Odd Found")
+
+  temp=1
+  if temp in [1,2,3,4]: # checks if a variable is in a list
+    print("\nTemp variable found in give list")
+#+end_src
+
+#+RESULTS:
+: Odd Found
+: Even Found
+: Odd Found
+: Even Found
+: 
+: Temp variable found in give list
+
+** Functions
+- A function in Python is a block of reusable code that performs a specific task with inputs (parameters) and returns a value.
+  Functions make code easier to write, test, and maintain by breaking up large programs into smaller pieces.
+- This is the main building block of Python projects. The formatting of a function is not complex, but naming and tracking
+  inputs is *key* in order to maintain organization throughout the code.
+#+begin_src python :results output
+  def greet(name): # the `def` statement must fall BEFORE the function is called otherwise Python won't know what to call
+    """
+    This function greets the person passed in as a parameter.
+    Description of a function usually falls immediately below the `def` statement
+    and is enclosed in triple quotes as you can see in this example.
+    """
+    print("Hello, " + name + ". How are you today?")
+
+  # Call the function
+  greet("John")
+#+end_src
+
+#+RESULTS:
+: Hello, John. How are you today?
+
+** Lambdas
+- This is a bit advanced but important to note as they show up quite often.
+  This is technically a subset of functions but they serve two distinct purposes,
+  so I have decided to split them up entirely.
+- A lambda function in Python is a single-line, anonymous function that takes inputs, performs *one* expression and returns the result.
+  They are best used in the following scenarios:
+  1. Map and Filter Functions: Lambda functions are often used with the map and filter functions to apply an operation to each element of a list or iterable.
+  2. Sorting: Lambda functions can be used as a key function when sorting a list of items.
+  3. Short Anonymous Functions: When you only need a small, throwaway function for a short period of time, a lambda function can be used to define it quickly without having to give it a name.
+     
++ NOTE: it is not necessary to understand each of these examples, just knowing it exists will be helpful in the future
+#+begin_src python :results output
+  # Example of 1: Map/Filter Functions
+  
+  numbers = [1, 2, 3, 4, 5]
+
+    # Use a lambda function with map to square each number in the list
+  squared_numbers = list(map(lambda x: x**2, numbers))
+
+  print("Squared numbers:", squared_numbers)
+
+#+end_src
+
+#+RESULTS:
+: Squared numbers: [1, 4, 9, 16, 25]
+
+#+begin_src python :results output
+  # Example of 2: Sorting
+
+  # A list of tuples representing (name, age)
+  people = [("Alice", 32), ("Bob", 40), ("Charlie", 25)]
+
+    # Sort the list by age, ascending
+  sorted_people = sorted(people, key=lambda x: x[1])
+
+  print("People sorted by age:", sorted_people)
+
+#+end_src
+
+#+RESULTS:
+: People sorted by age: [('Charlie', 25), ('Alice', 32), ('Bob', 40)]
+     
+#+begin_src python :results output
+  # Example of 3: Short Anonymous Functions (anonymous because it technically doesn't have a name)
+
+  sum = lambda x, y : x + y # extremely short function, would've taken up much more room as a full blown function
+
+    # Use the lambda function
+  print("The sum is:", sum(10, 20))
+#+end_src
+
+#+RESULTS:
+: The sum is: 30
+
+** Project 3
+- This project will introduce you to some of the structure that appears in Python projects, while
+  also introducing you to all the concepts mentioned above. Each concept is key Python programming,
+  and, in some way or another, makes up nearly every project that I have ever worked on.
+*** Prompt
+- Create a command-line game of guess that number, so when you call the python file in terminal it will prompt
+  the user to guess a random integer. The "secret number" must be between a specific value (ie. 1-20) and
+  must be randomly generated. If the user's guess is too high, the program should print that and continue.
+  Same goes for if it is too low. If the guess is correct, congratulate the user and exit!
+- Example of creating random numbers below:
+#+begin_src python :results output
+import random 
+
+random_number = random.randint(1, 10) # Generate a random integer between 1 and 10 (inclusive)
+
+print(f"The randomly generated number is: {random_number}") # Print the random number
+
+#+end_src
+
+#+RESULTS:
+: The randomly generated number is: 5
+
+*** Answer
+#+begin_src shell
+cd ~/coding/python-testing
+vim project3.py
+#+end_src
+
+project3.py
+#+begin_src python :results output
+import random
+
+def guessTheNumber():
+    # Generate a random number within a specified range
+    min_num = 1
+    max_num = 20
+    secret_num = random.randint(min_num, max_num)
+
+    # Prompt the user to guess the number
+    guess = None
+    while guess != secret_num:
+        guess = int(input(f"Guess a number between {min_num} and {max_num}: "))
+
+        # Check if the guess is correct
+        if guess == secret_num:
+            print("Congratulations! You guessed the number.")
+        elif guess < secret_num:
+            print("The number is higher.")
+        else:
+            print("The number is lower.")
+
+# Play the game
+guessTheNumber()
+
+#+end_src
+
+* Level 4: Git
+** What is Git?
+- Git is a distributed version control system that allows developers to track changes to their codebase over time.
+  It was created by Linus Torvalds in 2005 as a tool to manage the development of the Linux kernel. 
+  Since then, Git has become the standard tool for version control in the software development industry. 
+  With Git, developers can create a repository for their codebase and track changes to their files over time.
+  This allows them to revert to previous versions of their code, collaborate with other developers on the same project,
+  and manage conflicts when multiple developers make changes to the same file.
+
+- Git has since led to the creation of [Github](https://github.com) and [Gitlab](https://gitlab.com).
+  Both of which are free and store anybody's projects for private or public use.
+  The version controlling of git is seemlessly integrated into these companies and allows
+  programmers to remotely add their work to the website.
+
+** Remote Repositories
+- In programming, a remote repository refers to a code repository that is hosted on a server
+  outside of your local machine (ie. GitHub, GitLab, and Bitbucket).
+  Remote repositories are typically used for collaborative development, where multiple developers
+  work on the same codebase and need to share their changes with each other.
+
+- Local repository simply refers to your own computer since the files are stored and accessed
+  within your computers own memory rather than making a requst to a server. It is a great habit
+  to push local projects to your choice of a remote repository.
+** Installation
+This installation guide will specically be for Macs. For other devices, check [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+   - [Homebrew](https://brew.sh/) is required for the following steps
+     + Check if brew is on your computer: `brew -v`
+     + If command not found, run:
+      ```
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+      ``
+1. Create GitHub or GitLab account (GitHub is my personal choice)
+2. Add SSH key to your account
+   + Create private/public key pair
+     ```
+     cd ~/.ssh
+     ssh-keygen -t ed25519 -C "comment"
+     ```
+     - It will prompt you for what file name to put it into, write `personal`
+   + Copy the contents of the `personal.pub` file
+     ```
+     cat ~/.ssh/personal.pub
+     ```
+   + Add to account
+     - Navigate to account settings, then find `SSH Keys` in menu on left
+       + If GitHub click `Add new`
+     - Paste the contents of `personal.pub` into the `Key` section
+     - Add anything to `Title` section (ie. Personal Computer)
+     - `Usage type` should be default
+     - If GitLab, don't set an expiration date
+     - Click `Add` and you're done, you have created your first SSH key!
+3. Install git
+   ```
+   brew install git
+   ```
+4. Check if git was properly installed
+   ```
+   git -v
+   ```
+5. Edit git configuration file
+   - Add the email and username to `.gitconfig`
+     + Open file `~/.gitconfig` in text editor of choice then add:
+     ```
+     [user]
+       name = <github/lab username>
+       email = <email used to create github/lab account>
+     ```
+6. Check to see if your email and name were added
+   ```
+   git config -l
+   ```
+All set!!
+
+** Git Command
+- The following are written in the order that they are most likely to be used when
+  going through the basic flow of a project. Some of them are used far more often
+  than others. All these commands follow the `git` command and a space.
+  The most commonly used ones will be *emphasized*.
+   
++ NOTE: There are many more uses for the `git` command but these are the key ones
+
+1. clone {url, ssh}
+   - creates a directory named after the online repo along with the files
+     from a GitHub or GitLab repo that is linked to the online repository
+2. init
+   - used to initialize a repository (adds .git file to repo)
+3. remote {add, -v, remove, ...}
+   - add origin {url}: links the files to an online GitHub or GitLab repo
+     + NOTE: this connection is necessary to use all the below commands
+     + NOTE: connection automatically created with `git clone {url}`
+   - -v: lists the remote connections
+   - remove: connetion is terminated from the local to online repository
+4. *add* {file-name, .}
+   - <file-name>: add specific edited file name to staging
+   - .: add ALL edited files to staging
+5. status
+   - checks to see if files are in staging (green text)
+6. branch {blank, branch-name}
+   - blank: no text after `branch` will list all branches plus which one
+            is currently being used
+   - <branch-name>: create a new branch (used for major changes to not affect <main> branch)
+7. checkout {blank, branch-name}
+   - blank: checks to see if current branch is up to date with remote repo
+   - <branch-name>: switches the branch being used
+8. *commit* -m "Add Message Here"
+   - adds the staged files to the commit history along with a message
+     explaining what the edited files are
+9. log
+   - shows the commit history
+10. *push*
+    - exports the committed changes to the remote repository
+11. merge {branch-name}
+    - combines the <main> branch with the changes from <branch-name>
+
+** Project 4
+*** Prompt
+This project will take you through uploading Project 3 to a remote repository!
+
+Out of terminal steps: (GitHub will be the assumed choice)
+- Go to your GitHub page (ie. https://github.com/<username>
+- Click on the `Repositories` tab then click `New`
+- No template will be used
+- Name the project and add a description
+- Set it to private (or public)
+- *Do not* add a README file from this page. It will make things very complicated.
+- Leave everything else as the default and click `Create repository`
+  
+Terminal steps: (not as specific)
+- Initialize project 3 directory
+- Add connection to GitHub/Lab repository
+- Create a README.md file
+  + Add text to the file explaining the hardest part of Project 3 and of Project 4
+- Push the changes to the remote repository on the GitHub/Lab page
+- *OPTIONAL* Check your commit history in terminal
+- Reload the page to see the added files!
+*** Answer
+Given based on GitHub solution (GitLab would have a slightly different link at the `git remote` stage)
+#+begin_src shell
+  cd ~/coding/python-testing # move to the correct repository
+
+  git init # initialize the git commands inside the local repository
+  git remote add origin git@github.com:<username>/<project-name>.git # add remote connection to specific repository
+  touch README.md # create README file
+  vim README.md # use text editor of choice
+  git checkout main # make sure you are on the <main> branch
+  git add .     # add all files to staging
+  git commit -m "Adding files to my first remote repository" # add changes to commit history
+  git push # files sent to server
+  git log # check commit history
+
+#+end_src
+
+* TODO Level 5: Learning How to Learn
+* Level 6: Main Python Project
+* Level 7: Further Study
+* Resources
