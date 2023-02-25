@@ -207,11 +207,13 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
 *** Prompt
 - Successfully open the ~hello.py~ file nested under coding/python-testing that was created in Project 1
 - Add the following to the file:
-  #+begin_src python :results output
-    print("Hello World!") # This is my first line of Python code!!!
-  #+end_src
-  #+RESULTS:
-  : Hello World!
+#+begin_src python :results output
+print("Hello World!") # This is my first line of Python code!!!
+#+end_src
+
+#+RESULTS:
+: Hello World!
+
 - Try and run the code!
 **** Extra Credit:
   + If you used an application to write that code, try to remove the "!" using one of the terminal-based text editors.
@@ -264,31 +266,34 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
 - Elements can very easily be added to the end of lists as well, making it a very good way to
   dynamically store and access data quickly. 
 #+begin_src python :results output
-      a_list=[1, "2", 3.0] 
-      # this is a list, it can be made up of a combination of any of the variable types
+a_list=[1, "2", 3.0] 
+# this is a list, it can be made up of a combination of any of the variable types
 
-      print("At index {}, retrieved {} which is type: {}".format(0, a_list[0], type(a_list[0]))) 
-      # the [] after the list name indicates what index (spot in the list) that you want to access
+print("At index {}, retrieved {} which is type: {}".format(0, a_list[0], type(a_list[0]))) 
+# the [] after the list name indicates what index (spot in the list) that you want to access
 
-      print("At index {}, retrieved {} which is type: {}".format(1, a_list[1], type(a_list[1]))) 
-      # the index always starts at 0 so the length of the list is n-1
+print("At index {}, retrieved {} which is type: {}".format(1, a_list[1], type(a_list[1]))) 
+# the index always starts at 0 so the length of the list is n-1
       
-      print("At index {}, retrieved {} which is type: {}\n".format(2, a_list[2], type(a_list[2])))
-      # the \n at the end of the string tells the computer to add another line underneath the text
+print("At index {}, retrieved {} which is type: {}\n".format(2, a_list[2], type(a_list[2])))
+# the \n at the end of the string tells the computer to add another line underneath the text
 
-      # You can also use the contents of the list to find its own index, for example:
-      index_of_two=a_list.index("2") # .index() is used to find the index of an element on a list
-      print("{} is the index location for {} in the list".format(index_of_two, "2"))
+# You can also use the contents of the list to find its own index, for example:
+index_of_two=a_list.index("2") # .index() is used to find the index of an element on a list
+print("{} is the index location for {} in the list".format(index_of_two, "2"))
 
-      # Lastly, you can append elements to the end of the list, for example:
-      a_list.append("added")
-      print("This is the list after 'added' was appended to the end of the list: ", a_list)
-      # You can also remove elements of the list
-      a_list.remove('2')
-      print("This is the list after '2' was removed from the list: ", a_list)
-      # You can also get the length of the list (as well as every variable type in python so this next command is very helpful)
-      length_of_list=len(a_list)
-      print("The length of the list after an element was added is: ", length_of_list)
+# Lastly, you can append elements to the end of the list, for example:
+a_list.append("added")
+print("This is the list after 'added' was appended to the end of the list: ", a_list)
+
+# You can also remove elements of the list
+a_list.remove('2')
+print("This is the list after '2' was removed from the list: ", a_list)
+
+# You can also get the length of the list
+# As well as every variable type in python so this next command is very helpful
+length_of_list=len(a_list)
+print("The length of the list after an element was added is: ", length_of_list)
 #+end_src
 
 #+RESULTS:
@@ -338,11 +343,16 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
   They are useful when you want to group data together that will remain constant throughout the code.
 - Tuples are not too commonly used except for very specific use cases. They are creatd by enclosing data with () instead of [] like with a list.
 #+begin_src python :results output
-  a_tuple=("John", 32, "Male") # this creates the tuple
+a_tuple=("John", 32, "Male") # this creates the tuple
 
-  name, age, gender = a_tuple # each element, in order, is put into its respective variable from the tuple
-  print("The elements of the tuple include: ", name, age, gender)
-  print("The element in the first index of the tuple is: ", a_tuple[0]) # tuples also support indexing (similar to lists)
+# each element, in order, is put into its respective variable from the tuple
+name, age, gender = a_tuple
+# NOTE: running print(f"") allows variables to be passed as seen below
+# However, if they are not present, an error is raised rather than printing nothing
+print(f"The elements of the tuple include: {name}, {age}, {gender}")
+
+# tuples also support indexing (similar to lists)
+print("The element in the first index of the tuple is: ", a_tuple[0])
 #+end_src
 
 #+RESULTS:
@@ -472,16 +482,19 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
 - This is the main building block of Python projects. The formatting of a function is not complex, but naming and tracking
   inputs is *key* in order to maintain organization throughout the code.
 #+begin_src python :results output
-  def greet(name): # the `def` statement must fall BEFORE the function is called otherwise Python won't know what to call
-    """
-    This function greets the person passed in as a parameter.
-    Description of a function usually falls immediately below the ~def~ statement
-    and is enclosed in triple quotes as you can see in this example.
-    """
+# The `def` statement must fall BEFORE the function is called otherwise Python won't know what to call
+# START OF FUNCTION
+def greet(name):
+"""
+This function greets the person passed in as a parameter.
+Description of a function usually falls immediately below the ~def~
+and is enclosed in triple quotes as you can see in this example.
+"""
     print("Hello, " + name + ". How are you today?")
+# END OF FUNCTION
 
-  # Call the function
-  greet("John")
+# Call the function
+greet("John")
 #+end_src
 
 #+RESULTS:
