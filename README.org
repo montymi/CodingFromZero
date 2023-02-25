@@ -609,7 +609,7 @@ guessTheNumber()
   This allows them to revert to previous versions of their code, collaborate with other developers on the same project,
   and manage conflicts when multiple developers make changes to the same file.
 
-- Git has since led to the creation of [Github](https://github.com) and [Gitlab](https://gitlab.com).
+- Git has since led to the creation of [[https://github.com][Github]] and [[https://gitlab.com][Gitlab]].
   Both of which are free and store anybody's projects for private or public use.
   The version controlling of git is seemlessly integrated into these companies and allows
   programmers to remotely add their work to the website.
@@ -624,8 +624,8 @@ guessTheNumber()
   within your computers own memory rather than making a requst to a server. It is a great habit
   to push local projects to your choice of a remote repository.
 ** Installation
-This installation guide will specically be for Macs. For other devices, check [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-   - [Homebrew](https://brew.sh/) is required for the following steps
+This installation guide will specically be for Macs. For other devices, check [[https://git-scm.com/book/en/v2/Getting-Started-Installing-Git][Git]]
+  - [[https://brew.sh/][Homebrew]] is required for the following steps
      + Check if brew is on your computer: ~brew -v~
      + If command not found, run:
 #+begin_src shell
