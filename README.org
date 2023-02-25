@@ -570,8 +570,10 @@ print(f"The randomly generated number is: {random_number}")
 *** Answer
 Terminal:
 #+begin_src shell
-cd ~/coding/python-testing
-vim project3.py
+cd ~/coding/python-testing # change to python-testing directory
+touch project3.py # create projec3.py file
+
+# edit the file in your text editor/IDE of choice
 #+end_src
 
 Python solution found in [[./project3.py][project3.py]]
