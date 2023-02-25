@@ -708,9 +708,10 @@ All set!!
 7. ~checkout {blank, branch-name}~
    - blank: checks to see if current branch is up to date with remote repo
    - <branch-name>: switches the branch being used
-8. *KEY* ~commit -m "Add Message Here"~
+8. *KEY* ~commit -m~
    - adds the staged files to the commit history along with a message
-     explaining what the edited files are
+     explaining the edits
+     + the message must be enclosed by ""
 9. ~log~
    - shows the commit history
 10. *KEY* ~push~
