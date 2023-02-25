@@ -91,6 +91,7 @@ Lastly, create a file called `hello.py` in the `python-testing` folder and then 
     - python-testing
       - hello.py
 *** Answer
+Terminal:
 #+begin_src shell
   cd
   mkdir coding
@@ -580,12 +581,13 @@ print(f"The randomly generated number is: {random_number}")
 : The randomly generated number is: 5
 
 *** Answer
+Terminal:
 #+begin_src shell
 cd ~/coding/python-testing
 vim project3.py
 #+end_src
 
-project3.py
+Project3.py:
 #+begin_src python :results output
 import random
 
@@ -610,7 +612,6 @@ def guessTheNumber():
 
 # Play the game
 guessTheNumber()
-
 #+end_src
 
 * Level 4: Git
@@ -755,6 +756,7 @@ Terminal steps: (not as specific)
 - Reload the page to see the added files!
 *** Answer
 Given based on GitHub solution (GitLab would have a slightly different ssh url at the ~git remote~ stage)
+Terminal:
 #+begin_src shell
   cd ~/coding/python-testing # move to the correct repository
 
