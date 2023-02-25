@@ -482,7 +482,7 @@ print("The element in the first index of the tuple is: ", a_tuple[0])
 - This is the main building block of Python projects. The formatting of a function is not complex, but naming and tracking
   inputs is *key* in order to maintain organization throughout the code.
 #+begin_src python :results output
-# The `def` statement must fall BEFORE the function is called otherwise Python won't know what to call
+# The `def` statement must fall BEFORE the function is called so Python knows what to call
 # START OF FUNCTION
 def greet(name):
 """
