@@ -93,18 +93,18 @@ Lastly, create a file called ~hello.py~ in the ~python-testing~ folder and then 
 Terminal commands found in [[./project1.sh][project1.sh]]
 
 * Level 2: Integrated Development Environments (IDEs)
-- To start, a text editor is exactly what it sounds like: a program/application that allows you to edit text.
-  Sometimes, especially when programming, the ability to edit text is not enough to create an efficient work environment.
-  This is where Integrated Development Environments come in, because they add some key features that are necessary in software development.
-  Most IDEs also allow for customizability with a plethora of plugins or editable configurations, but that will come with time.
-  For now, picking a simple IDE that contains the necessary features to begin your coding journey is all that you will need for this course.
+To start, a text editor is exactly what it sounds like: a program/application that allows you to edit text.
+Sometimes, especially when programming, the ability to edit text is not enough to create an efficient work environment.
+This is where Integrated Development Environments come in, because they add some key features that are necessary in software development.
+Most IDEs also allow for customizability with a plethora of plugins or editable configurations, but that will come with time.
+For now, picking a simple IDE that contains the necessary features to begin your coding journey is all that you will need for this course.
 ** Applications
 *** Visual Studio Code
-- (aka VS Code) My personal choice for application based IDE. It is open-source code editor developed by Microsoft.
-  It is a modern, feature-rich code editor that is suitable for a wide range of programming languages and platforms.
+(aka VS Code) My personal choice for application based IDE. The open-source code editor developed by Microsoft,
+is a modern, feature-rich code editor that is suitable for a wide range of programming languages and platforms.
 
-- The main *goal* of VS Code is customizability, which allows the user to create a completely unique work environment
-  with a very small learning curve because of its modern, clean, and organized user interface.
+The main *goal* of VS Code is customizability, which allows the user to create a completely unique work environment
+with a very small learning curve because of its modern, clean, and organized user interface.
 **** Pros
 - Wide range of extensions and plugins
 - IntelliSense feature for smart code completion
@@ -117,9 +117,10 @@ Terminal commands found in [[./project1.sh][project1.sh]]
 - Slower than other options
 - Can become fairly computer resource intensive (depending on how many plugins)
 *** Sublime Text
-- My first ever IDE. It focuses on performance which makes it a lot faster and more lightweight than VS Code.
-  Similar, but less extensive, customizability options to VS Code.
-- The main *goal* of Sublime Text is performance coupled with a minimalist interface, removing distractions and allowing for a clean work environment.
+My first ever IDE. It focuses on performance which makes it a lot faster and more lightweight than VS Code.
+Similar, but less extensive, customizability options to VS Code.
+
+The main *goal* of Sublime Text is performance coupled with a minimalist interface, removing distractions and allowing for a clean work environment.
 **** Pros
 - Small learning curve
 - User-friendly interface
@@ -133,10 +134,11 @@ Terminal commands found in [[./project1.sh][project1.sh]]
 - Less built in features
 - Not too commonly used anymore
 *** PyCharm
-- Never personally used, but used by many colleagues. To put it simply, PyCharm is VS Code but optimized to function at the speed of Sublime Text.
-  Although this may sound ideal, it is rare that you code in one language for your entire career. This means that most PyCharm programmers have to use
-  language specific IDEs, slowing down work flow and rendering the customizability of PyCharm useless.
-- The main *goal* of PyCharm is to create a work environment specialized for writing, editing, and debugging Python code.
+Never personally used, but used by many colleagues. To put it simply, PyCharm is VS Code but optimized to function at the speed of Sublime Text.
+Although this may sound ideal, it is rare that you code in one language for your entire career. This means that most PyCharm programmers have to use
+language specific IDEs, slowing down work flow and rendering the customizability of PyCharm useless.
+
+The main *goal* of PyCharm is to create a work environment specialized for writing, editing, and debugging Python code.
 **** Pros
 - User-friendly interface
 - Intelligent code completion
@@ -151,12 +153,13 @@ Terminal commands found in [[./project1.sh][project1.sh]]
 - Resource intensive
 ** Terminal Based
 *** Vim
-- Vim is a highly configurable text editor that is widely used by developers and system administrators.
-  It is known for its modal interface, which allows users to perform editing tasks efficiently with a minimal number of keystrokes.
-  Vim was built off of another text editor known was ~vi~, and vim has now been built upon as well, with a text editor called ~neovim~ (my personal choice).
-  Vi is fairly old and does not release any new features, while Vim is a very stable release with no bugs and is very slow to add features.
-  Neovim is like the young genius, always trying to implement new features but not the safest in terms of stability as the features may
-  have the occasional bug (although this is very rare and would not harm the computer).
+Vim is a highly configurable text editor that is widely used by developers and system administrators.
+It is known for its modal interface, which allows users to perform editing tasks efficiently with a minimal number of keystrokes.
+Vim was built off of another text editor known was ~vi~, and vim has now been built upon as well, with a text editor called ~neovim~ (my personal choice).
+Vi is fairly old and does not release any new features, while Vim is a very stable release with no bugs and is very slow to add features.
+Neovim is always trying to implement new features but not the safest in terms of stability as the features may
+have the occasional bug (although this is very rare and would not harm the computer).
+
 - If you were to choose any flavor of vim as your IDE, I would personally send you a configuration file to fix its rather plain
   user-interface and lack of packages, since, out of box, vim is simply a text editor and must be turned into an IDE.
 **** Pros
@@ -170,9 +173,10 @@ Terminal commands found in [[./project1.sh][project1.sh]]
 - Steep learning curve
 - Limited built-in features (out of box)
 *** Nano
-- Nano is a simple, easy-to-use text editor that is widely used on Unix-like systems, including Linux and macOS.
-  This means that it should (along with vi) be installed on almost every computer/server that you might use, except Windows but everyone hates windows.
-  It is known for its user-friendly interface, which makes it accessible for users who are new to the command line.
+Nano is a simple, easy-to-use text editor that is widely used on Unix-like systems, including Linux and macOS.
+This means that it should (along with vi) be installed on almost every computer/server that you might use, except Windows but everyone hates windows.
+It is known for its user-friendly interface, which makes it accessible for users who are new to the command line.
+
 - This is by FAR the easiest option, but it is also the worst option. It is very good for beginners but quickly grown out of.
 **** Pros
 - Small learning curve
@@ -201,11 +205,14 @@ print("Hello World!") # This is my first line of Python code!!!
 #+RESULTS:
 : Hello World!
 
-- Try and run the code! Your hello.py file should resemble [[./project2.py][project2.py]]
+- Try and run the code! Your ~hello.py~ file should resemble [[./project2.py][project2.py]]
 **** Extra Credit:
   + If you used an application to write that code, try to remove the "!" using one of the terminal-based text editors.
     It is important to learn how to use the basic functionality of both.
 * Level 3: Python
+Python is a popular programming language that's known for its simplicity, versatility, and strong community. 
+It's used for a wide range of applications, including web development, scientific computing, and data analysis.
+Python's easy-to-read syntax and powerful libraries make it a great language for beginners and experienced developers alike.
 ** Variables
 - The storage of data in easily usable words known as variables.
 *** Strings, Integers, and Floats
@@ -215,16 +222,23 @@ print("Hello World!") # This is my first line of Python code!!!
     "this is a string, Michael said". However, if I want the first part to be a quote, I must use single quotes instead.
     So it would become: "'this is a string', Michael said".
 #+begin_src python :results output
-  # Before we start, the line you are currently reading is a comment, which is NOT read by the computer
+  # This line (starts w/ #) is a comment, which is NOT read by the computer
   '''
-  Therefore, comments can be used as notes to self or other programmers in order to better understand what things do.
-  This text right here a multi-line quote, set off by the three single quotes and enclosed by three single quotes as well.
-  Multi-line comments are also not read by the computer and very useful at the beginning of programs for full project explanation if necessary.
+  Therefore, comments can be used as notes to self or other programmers 
+  in order to better understand what things do.
+  This text right here a multi-line quote, set off by the three single 
+  quotes and enclosed by three single quotes as well.
+  Multi-line comments are also not read by the computer and very useful 
+  at the beginning of programs for full project explanation if necessary.
   '''
-
-  string="word" # a string is basically anything in quotes so "a", "word", "or a sentence or even", "1" are all strings
-  integer=1 # an integer is any whole number so -2, -1, 0, 1, 2 are all integers 
-  a_float=1.2 # a float is any non-whole number so any number with a decimal, meaning 0.1, 1.1, 1.11, 11.11 are all floats
+  # a string is anything in quotes so "a", 'word', "a sentence", and '1' are all strings
+  string="word"   
+  
+  # an integer is any whole number so -2, -1, 0, 1, 2 are all integers
+  integer=1  
+  
+  # a float is any non-whole number, meaning 0.1, 1.1, 1.11, 11.11 are all floats
+  a_float=1.2 
 
   print("{} is type: {}".format(string, type(string)))
   print("{} is type: {}".format(integer, type(integer)))
@@ -334,7 +348,7 @@ a_tuple=("John", 32, "Male") # this creates the tuple
 
 # each element, in order, is put into its respective variable from the tuple
 name, age, gender = a_tuple
-# NOTE: running print(f"") allows variables to be passed as seen below
+# NOTE: running print(f"some text and {some_variable}") allows variables to be passed as seen below
 # However, if they are not present, an error is raised rather than printing nothing
 print(f"The elements of the tuple include: {name}, {age}, {gender}")
 
