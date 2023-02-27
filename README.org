@@ -5,9 +5,10 @@
 #+startup: show2levels
 #+date: <2023-01-31 Tue>
 
+
 * Level 1: Terminal
 Your terminal/shell is the center for everything in programming. Below is a brief overview of what it is; however, don't get too caught up in the details.
-The main goal of this level is to introduce you to some concepts and vocab, but everything that is "need to know" is found in [[#Project 1][Project 1]].
+The main goal of this level is to introduce you to some concepts and vocab, but everything that is "need to know" is found in [[#project-1][Project 1]].
 It is your computer if not for the GUI (ie. apps), everything you see on your screen can be found in the terminal.
 There are many "flavors" of languages used to navigate the shell, most notably: zsh, bash, fish, and shell. However, they are all fairly similar.
 
