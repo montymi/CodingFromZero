@@ -1,15 +1,13 @@
-
 #+title: Getting Started with Code
 #+subtitle: Welcome to the Rabbit Hole
 #+author: Michael Montanaro
 #+description: The guide I wish was around when I was getting started with coding.
 #+startup: show2levels
 #+date: <2023-01-31 Tue>
-#+last-edited: <2023-02-25 Sat>
 
 * Level 1: Terminal
 Your terminal/shell is the center for everything in programming. Below is a brief overview of what it is; however, don't get too caught up in the details.
-The main goal of this level is to introduce you to some concepts and vocab, but everything that is "need to know" is found in *Project 1*.
+The main goal of this level is to introduce you to some concepts and vocab, but everything that is "need to know" is found in [[#Project 1][Project 1]].
 It is your computer if not for the GUI (ie. apps), everything you see on your screen can be found in the terminal.
 There are many "flavors" of languages used to navigate the shell, most notably: zsh, bash, fish, and shell. However, they are all fairly similar.
 
@@ -17,7 +15,7 @@ Any code run on your computer, in any location, is run through a terminal. This 
 Navigating through the shell to reach certain directories (folders) and edit/run files take few commands, but the terminal is extremely powerful and useful.
 
 Advanced use of the terminal can allow for quick searches through entire directory paths.
-An example of which is if you start a search at the $PATH or the base of your computer, it will search every file in your computer.
+An example of which is if you start a search at the $HOME or the base of your computer, it will search every file in your computer.
 That knowledge will come with time, for now, you will focus on terminology and then a few minor commands.
 
 ** Terminology
@@ -33,7 +31,7 @@ That knowledge will come with time, for now, you will focus on terminology and t
 - argument = something that is passed to a command to change its behavior
   
 - $HOME = variable showing where the parent directory for a given user is, commonly known as the *root* directory
-  - ex. my $HOME variable would be `Users/michaelmontanaro/`
+  - ex. my $HOME variable would be ~Users/michaelmontanaro/~
     
 - $PATH = variable that shows where to find all *external* commands that might need to be run from the terminal (such as any coding language)
 
@@ -42,49 +40,49 @@ That knowledge will come with time, for now, you will focus on terminology and t
 ** Key Commands
 If (argument) is in definition of a command, any nested text will be the possible thing to add after a space is put between the command and the argument
 If (TC) is in definiction of a command, then the (argument) of the command can be filled or listed using the <TAB> key
-To learn more about any of these commands type `man` (for manual) followed by the command or type the command followed by --help. To exit the screen that pops up, type "q".
+To learn more about any of these commands type ~man~ (for manual) followed by the command or type the command followed by --help. To exit the screen that pops up, type "q".
 
-- pwd = print working/current directory, it shows which folder you are in
+- ~pwd~ = print working/current directory, it shows which folder you are in
 
-- cd = change directory (argument), move to a different directory
+- ~cd~ = change directory (argument), move to a different directory
   - /no argument/ = go back to $HOME (root) directory
   - .. = go back *one* folder
-  - folder_name = go up to given folder (<TAB> will show all possible folder options)
+  - /folder_name/ = go up to given folder (<TAB> will show all possible folder options)
 
-- mkdir = make a directory/folder (argument)
-  - folder_name = name of folder to be created, avoid spaces so use either - or _ to combine words
+- ~mkdir~ = make a directory/folder (argument)
+  - /folder_name/ = name of folder to be created, avoid spaces so use either - or _ to combine words
 
-- ls = list contents of directory (argument)
-  - ls -a = show hidden files (anyting starting with a ".") as well
-  - ls -l = make everything neater and in a list
-  - ls -la = combination of both above commands (*used most often*)
+- ~ls~ = list contents of directory (argument)
+  - ~-a~ = show hidden files (anyting starting with a ".") as well
+  - ~-l~ = make everything neater and in a list
+  - ~-la~ = combination of both above commands (*used most often*)
 
-- vi, vim, or nano = terminal based text editors (argument) (TC)
-  - name_of_file = opens that file for editing if it exists, creates a new file if it does not
+- ~vi~, ~vim~, or ~nano~ = terminal based text editors (argument) (TC)
+  - /name_of_file/ = opens that file for editing if it exists, creates a new file if it does not
 
-- cat = prints out the contents of a file (argument) (TC)
-  - name_of_file = file whose contents will be outputted
+- ~cat~ = prints out the contents of a file (argument) (TC)
+  - /name_of_file/ = file whose contents will be outputted
 
-- touch = create a file without opening it (argument)
-  - name_of_file = file to be created
+- ~touch~ = create a file without opening it (argument)
+  - /name_of_file/ = file to be created
 
-- open = opens a file in prefered application (argument)
-  - name_of_file = opens file in prefered GUI text editor or the TextEdit application
-  - url = opens the webpage in prefered browser
+- ~open~ = opens a file in prefered application (argument)
+  - /name_of_file/ = opens file in prefered GUI text editor or the TextEdit application
+  - /url/ = opens the webpage in prefered browser
 
-- echo = print argument to terminal (argument)
-  -"text" = prints text to terminal
-  -variable = prints variable (such as contents of $HOME, $PATH, $SHELL) to terminal
+- ~echo~ = print argument to terminal (argument)
+  - "text" = prints text to terminal
+  - /variable/ = prints variable (such as contents of $HOME, $PATH, $SHELL) to terminal
 
-- grep = *ADVANCED* searches a file or directory
+- ~grep~ = *ADVANCED* searches a file or directory
 
 - | = *ADVANCED* puts the output of one command into another
 
 ** Project 1
 This project will introduce you to the basics of using your terminal to naviagate your computer, create files, and run CLI commands.
 *** Prompt
-Create a folder, named `coding`, under the root directory, and then create a folder called `python-testing` in that folder.
-Lastly, create a file called `hello.py` in the `python-testing` folder and then list the contents of the `python-testing` folder. The python file should be the 3rd child of the root directory.
+Create a folder, named ~coding~, under the root directory, and then create a folder called ~python-testing~ in that folder.
+Lastly, create a file called ~hello.py~ in the ~python-testing~ folder and then list the contents of the ~python-testing~ folder. The python file should be the 3rd child of the root directory.
 **** Hint
 - $HOME
   - coding
@@ -154,7 +152,7 @@ Terminal commands found in [[./project1.sh][project1.sh]]
 *** Vim
 - Vim is a highly configurable text editor that is widely used by developers and system administrators.
   It is known for its modal interface, which allows users to perform editing tasks efficiently with a minimal number of keystrokes.
-  Vim was built off of another text editor known was `vi`, and vim has now been built upon as well, with a text editor called `neovim`.
+  Vim was built off of another text editor known was ~vi~, and vim has now been built upon as well, with a text editor called ~neovim~ (my personal choice).
   Vi is fairly old and does not release any new features, while Vim is a very stable release with no bugs and is very slow to add features.
   Neovim is like the young genius, always trying to implement new features but not the safest in terms of stability as the features may
   have the occasional bug (although this is very rare and would not harm the computer).
@@ -211,7 +209,7 @@ print("Hello World!") # This is my first line of Python code!!!
 - The storage of data in easily usable words known as variables.
 *** Strings, Integers, and Floats
 - In python, there are three main types of variables: strings, integers, and floats.
-  - *Important* if you are to quote something in a string, you must use the opposite of the quote you are using
+  - *IMPORTANT* if you are to quote something in a string, you must use the opposite of the quote you are using
     to signify that it is a string. So, for example, if I am making a sentence a string I would do:
     "this is a string, Michael said". However, if I want the first part to be a quote, I must use single quotes instead.
     So it would become: "'this is a string', Michael said".
@@ -470,7 +468,7 @@ print("The element in the first index of the tuple is: ", a_tuple[0])
 - This is the main building block of Python projects. The formatting of a function is not complex, but naming and tracking
   inputs is *key* in order to maintain organization throughout the code.
 #+begin_src python :results output
-# The `def` statement must fall BEFORE the function is called so Python knows what to call
+# The ~def~ statement must fall BEFORE the function is called so Python knows what to call
 # START OF FUNCTION
 def greet(name):
 """
@@ -671,7 +669,7 @@ All set!!
 3. ~remote {add, -v, remove, ...}~
    - add origin {url}: links the files to an online GitHub or GitLab repo
      + NOTE: this connection is necessary to use all the below commands
-     + NOTE: connection automatically created with `git clone {url}`
+     + NOTE: connection automatically created with ~git clone {url}~
    - -v: lists the remote connections
    - remove: connetion is terminated from the local to online repository
 4. *KEY* ~add {file-name, .}~
@@ -720,9 +718,17 @@ Terminal steps: (not as specific)
 - Reload the page to see the added files!
 *** Answer
 Given based on GitHub solution (GitLab would have a slightly different ssh url at the ~git remote~ stage)
+
 Terminal commands found in [[./project4.sh][project4.sh]]
 
-* TODO Level 5: Learning How to Learn
+* TODO Level 5: Learning in Programming
+** Languages
+** Software
+** Project 5
+*** Prompt
+ADD MORE TO LATER
+Add pytests to your [[./project3.py][project3.py]]
+*** Answer
 * Level 6: Main Python Project
 * Level 7: Further Study
 * Resources
