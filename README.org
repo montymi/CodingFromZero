@@ -745,52 +745,52 @@ results to the desired results. It is a bit hard to understand/explain without f
 brief tutorial of Pytest using examples to explain how to use the module/tool and why.
 ** Pytest
 1. Install Pytest with ~pip install pytest~
-- Pip is a tool that comes with the installation of python, allowing you to easily install python packages
+  - Pip is a tool that comes with the installation of python, allowing you to easily install python packages
 2. Create a test file such as ~test_guide.py~
-- File must be in the same directory or subdirectory as the main python file
+  - File must be in the same directory or subdirectory as the main python file
 3. Add tests to the file to test the functionality of the main code
-File Name: ~main.py~
-#+name: main.py
-#+begin_src python :results output
-def add(x, y):
-  result = x + y
-  return result
-#+end_src
+  File Name: ~main.py~
+  #+name: main.py
+  #+begin_src python :results output
+  def add(x, y):
+    result = x + y
+    return result
+  #+end_src
 
-File Name: ~test_main.py~
-#+name: test_main.py
-#+begin_src python :results output
-import pytest 
-from main import add # this line gives the test file access to the "add" function from main.py
+  File Name: ~test_main.py~
+  #+name: test_main.py
+  #+begin_src python :results output
+  import pytest 
+  from main import add # this line gives the test file access to the "add" function from main.py
 
-# tests the "add" function from main.py
-def test_add():
-    '''
-    Good habit to add comments to your code.
-    Testing the add function in main.py
-    Expected 2 + 3 == 5
-    '''
-    assert add(2,3) == 5
+  # tests the "add" function from main.py
+  def test_add():
+      '''
+      Good habit to add comments to your code.
+      Testing the add function in main.py
+      Expected 2 + 3 == 5
+      '''
+      assert add(2,3) == 5
 
-'''
-the function immediately following this "decorator" (@pytest.fixture) is treated as a variable
-by pytest. it can be called just as a variable would (as seen in test_sum).
-'''
-@pytest.fixture
-def numbers():
-    return [1,2,3,4,5]
+  '''
+  the function immediately following this "decorator" (@pytest.fixture) is treated as a variable
+  by pytest. it can be called just as a variable would (as seen in test_sum).
+  '''
+  @pytest.fixture
+  def numbers():
+      return [1,2,3,4,5]
 
-# shows how a pytest fixture can be called in a test
-def test_fixture(numbers):
-    '''
-    Testing using a pytest fixture as a variable
-    Expected 1 + 2 + 3 + 4 + 5 == 15
-    '''
-    assert sum(numbers) == 15
-#+end_src
+  # shows how a pytest fixture can be called in a test
+  def test_fixture(numbers):
+      '''
+      Testing using a pytest fixture as a variable
+      Expected 1 + 2 + 3 + 4 + 5 == 15
+      '''
+      assert sum(numbers) == 15
+  #+end_src
 4. Lastly, run the test from the root of your project by typing ~pytest~ and hitting enter
-- Pytest will display the results of your tests in the terminal
-- To get a more verbose breakdown of the results (BETTER OPTION) type ~pytest -v~
+  - Pytest will display the results of your tests in the terminal
+  - To get a more verbose breakdown of the results (BETTER OPTION) type ~pytest -v~
 NOTE: Pytest functions can also be added directly to the main.py file but that is not standard
 ** TODO Project 5
 *** Prompt
