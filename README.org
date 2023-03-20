@@ -736,14 +736,91 @@ Given based on GitHub solution (GitLab would have a slightly different ssh url a
 
 Terminal commands found in [[./project4.sh][project4.sh]]
 
-* TODO Level 5: Learning in Programming
-** Languages
-** Software
-** Project 5
+* Level 5: Testing
+Ensuring functionality is a key component of software development (and really any field). 
+This includes making sure that the final product functions upon running as long as the system meets the requirements.
+It also includes making sure any updates to the code does not change the final desired result in a way that wasn't expected.
+This is done through creating tests, which are repositories, files, or even just a single function that compare the main codes
+results to the desired results. It is a bit hard to understand/explain without first seeing an example. Below gives a
+brief tutorial of Pytest using examples to explain how to use the module/tool and why.
+** Pytest
+1. Install Pytest with ~pip install pytest~
+- Pip is a tool that comes with the installation of python, allowing you to easily install python packages
+2. Create a test file such as ~test_guide.py~
+- File must be in the same directory or subdirectory as the main python file
+3. Add tests to the file to test the functionality of the main code
+#+name: main.py
+#+begin_src python :results output
+def add(x, y):
+  result = x + y
+  return result
+#+end_src
+
+#+name: test_main.py
+#+begin_src python :results output
+import pytest 
+from main import add # this line gives the test file access to the "add" function from main.py
+
+# tests the "add" function from main.py
+def test_add():
+    '''
+    Good habit to add comments to your code.
+    Testing the add function in main.py
+    Expected 2 + 3 == 5
+    '''
+    assert add(2,3) == 5
+
+'''
+the function immediately following this "decorator" (@pytest.fixture) is treated as a variable
+by pytest. it can be called just as a variable would (as seen in test_sum).
+'''
+@pytest.fixture
+def numbers():
+    return [1,2,3,4,5]
+
+# shows how a pytest fixture can be called in a test
+def test_fixture(numbers):
+    '''
+    Testing using a pytest fixture as a variable
+    Expected 1 + 2 + 3 + 4 + 5 == 15
+    '''
+    assert sum(numbers) == 15
+#+end_src
+4. Lastly, run the test from the root of your project by typing ~pytest~ and hitting enter
+- Pytest will display the results of your tests in the terminal
+- To get a more verbose breakdown of the results (BETTER OPTION) type ~pytest -v~
+NOTE: Pytest functions can also be added directly to the main.py file but that is not standard
+** TODO Project 5
 *** Prompt
-ADD MORE TO LATER
-Add pytests to your [[./project3.py][project3.py]]
+Testing was one of the last things that I learned as I began by coding journey. In fact, I didn't 
+know that it existed until my first coding interview. Since then, I have spent days
+working on tests. For Project 5, I want you to add pytests to each function in the [[./project5.py][project5.py]]
+file found above and then have pytest successfully pass all TODO 5?? tests.
+NOTE: Before beginning, make sure to fully understand the ~project5.py~ file. You can try to make changes to the code
+and predict the outcome in order to practice and learn about the code.
 *** Answer
-* Level 6: Main Python Project
-* Level 7: Further Study
+TODO Python solution found in [[./test_project5.py][test_project5.py]]
+* Level 6: External Libraries
+Python is one of the most popular programming languages in the world, one of the main reasons for that
+is its vast ecosystem of external libraries. Each package extends pythons functionallity and has
+been created by the plethora of developers that use python everyday. Below is a list of the top 10 
+most commonly taught/used python libraries/packages:
+1. NumPy: numerical computing, provides powerful tools for working with arrays and matrices.
+2. Pandas: data analysis and manipulation, offers easy-to-use data structures and data analysis tools.
+3. Matplotlib: data visualizations, provides a wide range of plotting functions and customization options.
+4. Scikit-learn: machine learning, offers a broad range of tools for classification, regression, clustering, and other machine learning tasks.
+5. TensorFlow: deep learning, provides a flexible platform for building and training neural networks.
+6. Keras: neural networks API, built on top of TensorFlow and makes it easy to build and train neural networks.
+7. Pygame: game development, provides tools for creating games, graphics, and animations.
+8. Requests: making HTTP requests, makes it easy to interact with web APIs and websites.
+9. Beautiful Soup: web scraping, provides a simple and intuitive way to extract data from HTML and XML documents.
+10. Django: a web framework for building web applications, provides a powerful ORM, templating system, and administration interface.
+
+For the sake of education, I will walk you through the process of learning ONE of these tools. This should give you
+a nice process for learning any libraries in the future. 
+** TODO Numpy
+** Project 6 
+*** Prompt
+*** Answer
+* Level 7: Resume Python Project
 * Resources

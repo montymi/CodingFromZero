@@ -14,6 +14,7 @@ def guessTheNumber():
         # Check if the guess is correct
         if guess == secret_num:
             print("Congratulations! You guessed the number.")
+            return
         elif guess < secret_num:
             print("The number is higher.")
         else:
