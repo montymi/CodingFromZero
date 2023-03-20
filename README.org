@@ -749,6 +749,7 @@ brief tutorial of Pytest using examples to explain how to use the module/tool an
 2. Create a test file such as ~test_guide.py~
 - File must be in the same directory or subdirectory as the main python file
 3. Add tests to the file to test the functionality of the main code
+File Name: ~main.py~
 #+name: main.py
 #+begin_src python :results output
 def add(x, y):
@@ -756,6 +757,7 @@ def add(x, y):
   return result
 #+end_src
 
+File Name: ~test_main.py~
 #+name: test_main.py
 #+begin_src python :results output
 import pytest 
