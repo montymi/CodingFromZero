@@ -821,13 +821,25 @@ most commonly taught/used python libraries/packages:
 
 For the sake of education, I will walk you through the process of learning ONE of these tools. This should give you
 a nice process for learning any libraries in the future. 
-** TODO Numpy
+** Pandas
+Every library that you will use has *extensive* documentation, most of which will contain a section for installation and basic instructions called /Getting Started/.
+The following [[https://pandas.pydata.org/docs/getting_started/index.html][link] will take you to Pandas's introduciton guide.
+This page houses the links to very specific tutorials/guides for when you get stuck using the library. To begin, navigate to their
+[[https://pandas.pydata.org/docs/user_guide/10min.html#min][10 Minutes to Pandas] tutorial and read through the walkthrough. 
+As you read, take note of any major patterns that pop up in the use of the library. There is no need to try and memorize every function that comes with Pandas. 
+The internet and Pandas' documentation is there for a reason and it is very easy to quickly search how to do something. 
+The main difficulty in learning a new library is finding out what functionality it gives you rather than how to access that functionality.
+It is a lot faster to search how to do something than trying to figure out what you need Pandas to do. This method enables the user (you)
+to understand the most basic usage of Pandas, which then can be linked together to reach the more complex functionality of the library. 
+*NOTE*: The code blocks are shown as they would appear when typing in the terminal based python interpretor. This can be accessed by just typing in ~python~ in 
+your terminal or (the better option) donwloading iPython using ~pip install ipython~ and then just typing ~iptyhon~ in your terminal. Both methods will execute each line
+of python code as you go, rather than running the whole program at once. This is standard for data analysis and is how Jupyter Notebook functions. 
 ** TODO Project 6 
 *** Prompt
 *** Answer
 * TODO Level 7: Resume Python Project
 * Resources
-** TODO YouTube Channels
+** YouTube Channels
 - [[https://www.youtube.com/@definitelynoah][Definitely Noah]] : all levels of python videos, great way to continue mastering the language
 - [[https://www.youtube.com/@TechWithTim][Tech with Tim]] : fantastic walk through videos of any type of project
 - [[https://www.youtube.com/@NeuralNine][NeuralNine]] : introduces a lot of external libraries and shows how to use them
@@ -838,7 +850,7 @@ a nice process for learning any libraries in the future.
 - [[https://www.youtube.com/@freecodecamp][freeCodeCamp.org]] : full videos of many of the courses taugh on edX and Coursera
 - [[https://www.youtube.com/@ArjanCodes][ArjanCodes]] : breaks down the fundamentals of software engineering and writing *clean* code
 - [[https://www.youtube.com/@networkchuck][NetworkChuck]] : has a python course, teaches a lot about networks and ethical hacking
-** TODO Websites
+** Websites
 - [[https://portswigger.net/web-security][PortSwigger]] : training for ethical hacking
 - [[https://www.kaggle.com/][Kaggle]] : training for machine learning and data science
 - [[https://karpathy.ai/zero-to-hero.html?utm_source=tldrnewsletter][Karpathy]] : blog walking through a machine learning project
