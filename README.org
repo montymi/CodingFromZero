@@ -808,16 +808,16 @@ Python is one of the most popular programming languages in the world, one of the
 is its vast ecosystem of external libraries. Each package extends pythons functionallity and has
 been created by the plethora of developers that use python everyday. Below is a list of the top 10 
 most commonly taught/used python libraries/packages:
-1. NumPy : numerical computing, provides powerful tools for working with arrays and matrices.
-2. Pandas : data analysis and manipulation, offers easy-to-use data structures and data analysis tools.
-3. Matplotlib : data visualizations, provides a wide range of plotting functions and customization options.
-4. Scikit-learn : machine learning, offers a broad range of tools for classification, regression, clustering, and other machine learning tasks.
-5. TensorFlow : deep learning, provides a flexible platform for building and training neural networks.
-6. Keras : neural networks API, built on top of TensorFlow and makes it easy to build and train neural networks.
-7. Pygame : game development, provides tools for creating games, graphics, and animations.
-8. Requests : making HTTP requests, makes it easy to interact with web APIs and websites.
-9. Beautiful Soup : web scraping, provides a simple and intuitive way to extract data from HTML and XML documents.
-10. Django : a web framework for building web applications, provides a powerful ORM, templating system, and administration interface.
+1. [[https://numpy.org/][NumPy]] : numerical computing, provides powerful tools for working with arrays and matrices.
+2. [[https://pandas.pydata.org/][Pandas]] : data analysis and manipulation, offers easy-to-use data structures and data analysis tools.
+3. [[https://matplotlib.org/][Matplotlib]] : data visualizations, provides a wide range of plotting functions and customization options.
+4. [[https://scikit-learn.org/stable/][Scikit-learn]] : machine learning, offers a broad range of tools for classification, regression, clustering, and other machine learning tasks.
+5. [[https://www.tensorflow.org/][TensorFlow]] : deep learning, provides a flexible platform for building and training neural networks.
+6. [[https://keras.io/][Keras]] : neural networks API, built on top of TensorFlow and makes it easy to build and train neural networks.
+7. [[https://www.pygame.org/news][Pygame]] : game development, provides tools for creating games, graphics, and animations.
+8. [[https://requests.readthedocs.io/en/latest/][Requests]] : making HTTP requests, makes it easy to interact with web APIs and websites.
+9. [[https://beautiful-soup-4.readthedocs.io/en/latest/][Beautiful Soup]] : web scraping, provides a simple and intuitive way to extract data from HTML and XML documents.
+10. [[https://www.djangoproject.com/][Django]] : web framework for building web applications, provides a powerful ORM, templating system, and administration interface.
 
 For the sake of education, I will walk you through the process of learning ONE of these tools. This should give you
 a nice process for learning any libraries in the future. 
@@ -826,11 +826,13 @@ Every library that you will use has *extensive* documentation, most of which wil
 The following [[https://pandas.pydata.org/docs/getting_started/index.html][link]] will take you to Pandas's introduciton guide.
 This page houses the links to very specific tutorials/guides for when you get stuck using the library. To begin, navigate to their
 [[https://pandas.pydata.org/docs/user_guide/10min.html#min][10 Minutes to Pandas]] tutorial and read through the walkthrough. 
+
 As you read, take note of any major patterns that pop up in the use of the library. There is no need to try and memorize every function that comes with Pandas. 
 The internet and Pandas' documentation is there for a reason and it is very easy to quickly search how to do something. 
 The main difficulty in learning a new library is finding out what functionality it gives you rather than how to access that functionality.
 It is a lot faster to search how to do something than trying to figure out what you need Pandas to do. This method enables the user (you)
 to understand the most basic usage of Pandas, which then can be linked together to reach the more complex functionality of the library. 
+
 *NOTE*: The code blocks are shown as they would appear when typing in the terminal based python interpretor. This can be accessed by just typing in ~python~ in 
 your terminal or (the better option) donwloading iPython using ~pip install ipython~ and then just typing ~iptyhon~ in your terminal. Both methods will execute each line
 of python code as you go, rather than running the whole program at once. This is standard for data analysis and is how Jupyter Notebook functions. 
