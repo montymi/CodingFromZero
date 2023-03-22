@@ -823,9 +823,9 @@ For the sake of education, I will walk you through the process of learning ONE o
 a nice process for learning any libraries in the future. 
 ** Pandas
 Every library that you will use has *extensive* documentation, most of which will contain a section for installation and basic instructions called /Getting Started/.
-The following [[https://pandas.pydata.org/docs/getting_started/index.html][link] will take you to Pandas's introduciton guide.
+The following [[https://pandas.pydata.org/docs/getting_started/index.html][link]] will take you to Pandas's introduciton guide.
 This page houses the links to very specific tutorials/guides for when you get stuck using the library. To begin, navigate to their
-[[https://pandas.pydata.org/docs/user_guide/10min.html#min][10 Minutes to Pandas] tutorial and read through the walkthrough. 
+[[https://pandas.pydata.org/docs/user_guide/10min.html#min][10 Minutes to Pandas]] tutorial and read through the walkthrough. 
 As you read, take note of any major patterns that pop up in the use of the library. There is no need to try and memorize every function that comes with Pandas. 
 The internet and Pandas' documentation is there for a reason and it is very easy to quickly search how to do something. 
 The main difficulty in learning a new library is finding out what functionality it gives you rather than how to access that functionality.
