@@ -808,22 +808,44 @@ Python is one of the most popular programming languages in the world, one of the
 is its vast ecosystem of external libraries. Each package extends pythons functionallity and has
 been created by the plethora of developers that use python everyday. Below is a list of the top 10 
 most commonly taught/used python libraries/packages:
-1. NumPy: numerical computing, provides powerful tools for working with arrays and matrices.
-2. Pandas: data analysis and manipulation, offers easy-to-use data structures and data analysis tools.
-3. Matplotlib: data visualizations, provides a wide range of plotting functions and customization options.
-4. Scikit-learn: machine learning, offers a broad range of tools for classification, regression, clustering, and other machine learning tasks.
-5. TensorFlow: deep learning, provides a flexible platform for building and training neural networks.
-6. Keras: neural networks API, built on top of TensorFlow and makes it easy to build and train neural networks.
-7. Pygame: game development, provides tools for creating games, graphics, and animations.
-8. Requests: making HTTP requests, makes it easy to interact with web APIs and websites.
-9. Beautiful Soup: web scraping, provides a simple and intuitive way to extract data from HTML and XML documents.
-10. Django: a web framework for building web applications, provides a powerful ORM, templating system, and administration interface.
+1. NumPy : numerical computing, provides powerful tools for working with arrays and matrices.
+2. Pandas : data analysis and manipulation, offers easy-to-use data structures and data analysis tools.
+3. Matplotlib : data visualizations, provides a wide range of plotting functions and customization options.
+4. Scikit-learn : machine learning, offers a broad range of tools for classification, regression, clustering, and other machine learning tasks.
+5. TensorFlow : deep learning, provides a flexible platform for building and training neural networks.
+6. Keras : neural networks API, built on top of TensorFlow and makes it easy to build and train neural networks.
+7. Pygame : game development, provides tools for creating games, graphics, and animations.
+8. Requests : making HTTP requests, makes it easy to interact with web APIs and websites.
+9. Beautiful Soup : web scraping, provides a simple and intuitive way to extract data from HTML and XML documents.
+10. Django : a web framework for building web applications, provides a powerful ORM, templating system, and administration interface.
 
 For the sake of education, I will walk you through the process of learning ONE of these tools. This should give you
 a nice process for learning any libraries in the future. 
 ** TODO Numpy
-** Project 6 
+** TODO Project 6 
 *** Prompt
 *** Answer
-* Level 7: Resume Python Project
+* TODO Level 7: Resume Python Project
 * Resources
+** TODO YouTube Channels
+- [[https://www.youtube.com/@definitelynoah][Definitely Noah]] : all levels of python videos, great way to continue mastering the language
+- [[https://www.youtube.com/@TechWithTim][Tech with Tim]] : fantastic walk through videos of any type of project
+- [[https://www.youtube.com/@NeuralNine][NeuralNine]] : introduces a lot of external libraries and shows how to use them
+- [[https://www.youtube.com/@bawad][Ben Awad]] : talks specifically about being a software engineer
+- [[https://www.youtube.com/@fireship][Fireship]] : very short summaries of different software that you might use in the future
+- [[https://www.youtube.com/@simplilearnofficial][Simplilearn]] : full courses, very long and informative videos, great for learning anything new
+- [[https://www.youtube.com/@NesoAcademy][Neso Academy]] : same as above, but shorter videos broken up into parts
+- [[https://www.youtube.com/@freecodecamp][freeCodeCamp.org]] : full videos of many of the courses taugh on edX and Coursera
+- [[https://www.youtube.com/@ArjanCodes][ArjanCodes]] : breaks down the fundamentals of software engineering and writing *clean* code
+- [[https://www.youtube.com/@networkchuck][NetworkChuck]] : has a python course, teaches a lot about networks and ethical hacking
+** TODO Websites
+- [[https://portswigger.net/web-security][PortSwigger]] : training for ethical hacking
+- [[https://www.kaggle.com/][Kaggle]] : training for machine learning and data science
+- [[https://karpathy.ai/zero-to-hero.html?utm_source=tldrnewsletter][Karpathy]] : blog walking through a machine learning project
+- [[https://acloudguru.com/][A Cloud Guru]] : massive portfolio of differing courses, focused on cloud computing
+- [[https://www.w3schools.com/][W3Schools]] : all around guide to web developmnet, including python specific web development
+- [[https://www.sololearn.com/?v=2][Sololearn]] : duolingo of coding!!
+- [[https://www.edx.org/][EdX]] : full courses available (such as Harvard cs50 course) for free with projects built in
+- [[https://www.codecademy.com/][CodeAcademy]] : plethora of coding tutorials available for most langauges
+- [[https://www.udemy.com/][Udemy]] : many smaller courses available to learn specific skills (such as game development)
+- [[https://www.coursera.org/][Coursera]] : same as edX, huge list of courses available that include projects
