@@ -793,16 +793,16 @@ brief tutorial of Pytest using examples to explain how to use the module/tool an
   - Pytest will display the results of your tests in the terminal
   - To get a more verbose breakdown of the results (BETTER OPTION) type ~pytest -v~
 NOTE: Pytest functions can also be added directly to the main.py file but that is not standard
-** TODO Project 5
+** Project 5
 *** Prompt
 Testing was one of the last things that I learned as I began by coding journey. In fact, I didn't 
 know that it existed until my first coding interview. Since then, I have spent days
 working on tests. For Project 5, I want you to add pytests to each function in the [[./project5.py][project5.py]]
-file found above and then have pytest successfully pass all TODO 5?? tests.
+file found above and then have pytest successfully pass all 5 tests.
 NOTE: Before beginning, make sure to fully understand the ~project5.py~ file. You can try to make changes to the code
 and predict the outcome in order to practice and learn about the code.
 *** Answer
-TODO Python solution found in [[./test_project5.py][test_project5.py]]
+Python solution found in [[./test_project5.py][test_project5.py]]
 * Level 6: External Libraries
 Python is one of the most popular programming languages in the world, one of the main reasons for that
 is its vast ecosystem of external libraries. Each package extends pythons functionallity and has
@@ -841,10 +841,10 @@ Data science is a major reason many people get into coding in the first place. T
 to standardize the organization of data and allow for manipulation of the columns and rows in order to achieve a desired outcome. This is the basis of data science.
 For this project, you will import and handle the data given in [[./PROJECT6.csv][PROJECT6.csv]] using the Pandas library.
 *** Prompt
-The dataset given is a directory of all passangers of the Titanic. I would first like you to get me the avearge age of everyone on the ship, be careful because some
-passangers do not have an age in the database! Secondly, please return me a list of all the passengers whose cabin/cabins were recorded as well as the numbers
-of those cabins. This is a fairly complex problem set in comparison to the previous ones, but there are a LOT of resources online to help and you need to start getting
-prepared for the final project that comes after this. Good luck!
+The dataset given is a directory of all passangers of the Titanic. I would first like you to get me the avearge age of everyone on the ship (rounded to two decimal places). 
+Secondly, please return me the database but with all the missing cabin numbers dropped from the dataset. 
+Lastly, please export the edited dataset (after dropping the missing cabin numbers) to a .csv file. 
+This is a fairly complex problem set in comparison to the previous ones, but there are a LOT of resources online to help and you need to start getting prepared for the final project that comes after this. Good luck!
 *** Answer
 Answer can be found in [[./project6.py][project6.py]].
 * TODO Level 7: Resume Python Project
