@@ -836,9 +836,17 @@ to understand the most basic usage of Pandas, which then can be linked together 
 *NOTE*: The code blocks are shown as they would appear when typing in the terminal based python interpretor. This can be accessed by just typing in ~python~ in 
 your terminal or (the better option) donwloading iPython using ~pip install ipython~ and then just typing ~iptyhon~ in your terminal. Both methods will execute each line
 of python code as you go, rather than running the whole program at once. This is standard for data analysis and is how Jupyter Notebook functions. 
-** TODO Project 6 
+** Project 6
+Data science is a major reason many people get into coding in the first place. These datasets usually come in the form of a comma separated value (CSV) file, which is a way
+to standardize the organization of data and allow for manipulation of the columns and rows in order to achieve a desired outcome. This is the basis of data science.
+For this project, you will import and handle the data given in [[./PROJECT6.csv][PROJECT6.csv]] using the Pandas library.
 *** Prompt
+The dataset given is a directory of all passangers of the Titanic. I would first like you to get me the avearge age of everyone on the ship, be careful because some
+passangers do not have an age in the database! Secondly, please return me a list of all the passengers whose cabin/cabins were recorded as well as the numbers
+of those cabins. This is a fairly complex problem set in comparison to the previous ones, but there are a LOT of resources online to help and you need to start getting
+prepared for the final project that comes after this. Good luck!
 *** Answer
+Answer can be found in [[./project6.py][project6.py]].
 * TODO Level 7: Resume Python Project
 * Resources
 ** YouTube Channels
