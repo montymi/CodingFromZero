@@ -37,8 +37,8 @@ That knowledge will come with time, for now, you will focus on terminology and t
 - $SHELL = variable that stores the current shell scripting language (as mentioned above) being used in the terminal
   
 ** Key Commands
-If (argument) is in definition of a command, any nested text will be the possible thing to add after a space is put between the command and the argument
-If (TC) is in definiction of a command, then the (argument) of the command can be filled or listed using the <TAB> key
+While reading below, if (argument) is in the definition of a command, any nested text will be the possible text to add after the command.
+If tab complete (marked as (TC)) is in definiction of a command, then the (argument) of the command can be filled or listed using the ~<TAB>~ key
 
 To learn more about any of these commands type ~man~ (for manual) followed by the command or type the command followed by --help. To exit the screen that pops up, type ~q~.
 
