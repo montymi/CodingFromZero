@@ -848,6 +848,25 @@ This is a fairly complex problem set in comparison to the previous ones, but the
 *** Answer
 Answer can be found in [[./project6.py][project6.py]].
 * TODO Level 7: Resume Python Project
+This has definitely been the most challenging level of the guide from a creativity perspective. I struggled to find a project was complex and functional, while also being straightforward and fun.
+Many of the ideas that I came up with I dropped because they were either too specific or just very overdone. I wanted to have a project that would cement a love of coding, not create a deep
+loathinf of it. Nothing would be worse than to go through this entire course just to spend weeks working on the final project and then never coding again. No, my goal for this guide was to
+introduce people to the world of programming and add to their intellectual curiosity. That being said, I couldn't pick just one project, so there will be two options below. One will be a data
+science/visualization project and the other will be a game. Both are worthy of being placed on a resume and both are equally complex.
+
+*NOTE*: I am not particularly familiar with any of the libraries that were used in these projects so I used the same resources and processes that you will have to use in order
+to solve the problem statement. That is to say, the answers are out there. Do your research!!
+
+** Project 7.A - Data
+*** TODO Prompt
+*** Answer
+To avoid the temptation of you looking at my solution, I will not be making them public. Once you have completed your answer or are completely stuck, 
+email me at [[mailto:mcmontanaro01@gmail.com][mcmontanaro01@gmail.com]]. I will either help guide you or send you the solution so that you may check your work.
+** Project 7.B - Game
+*** TODO Prompt
+*** Answer
+To avoid the temptation of you looking at my solution, I will not be making them public. Once you have completed your answer or are completely stuck, 
+email me at [[mailto:mcmontanaro01@gmail.com][mcmontanaro01@gmail.com]]. I will either help guide you or send you the solution so that you may check your work.
 * Resources
 ** YouTube Channels
 - [[https://www.youtube.com/@definitelynoah][Definitely Noah]] : all levels of python videos, great way to continue mastering the language
