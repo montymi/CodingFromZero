@@ -76,7 +76,7 @@ To learn more about any of these commands type ~man~ (for manual) followed by th
 
 - ~grep~ = *ADVANCED* searches a file or directory
 
-- | = *ADVANCED* puts the output of one command into another
+- ~|~ = *ADVANCED* puts the output of one command into another
 
 ** Project 1
 This project will introduce you to the basics of using your terminal to naviagate your computer, create files, and run CLI commands.
