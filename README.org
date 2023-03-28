@@ -5,6 +5,13 @@
 #+startup: show2levels
 #+date: <2023-01-31 Tue>
 
+<!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 * Level 1: Terminal
 Your terminal/shell is the center for everything in programming. Below is a brief overview of what it is; however, don't get too caught up in the details.
@@ -890,3 +897,19 @@ email me at [[mailto:mcmontanaro01@gmail.com][mcmontanaro01@gmail.com]]. I will 
 - [[https://www.codecademy.com/][CodeAcademy]] : plethora of coding tutorials available for most langauges
 - [[https://www.udemy.com/][Udemy]] : many smaller courses available to learn specific skills (such as game development)
 - [[https://www.coursera.org/][Coursera]] : same as edX, huge list of courses available that include projects
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/montymi/ClearDocs.svg?style=for-the-badge
+[contributors-url]: https://github.com/montymi/ClearDocs/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/montymi/ClearDocs.svg?style=for-the-badge
+[forks-url]: https://github.com/montymi/ClearDocs/network/members
+[stars-shield]: https://img.shields.io/github/stars/montymi/ClearDocs.svg?style=for-the-badge
+[stars-url]: https://github.com/montymi/ClearDocs/stargazers
+[issues-shield]: https://img.shields.io/github/issues/montymi/ClearDocs.svg?style=for-the-badge
+[issues-url]: https://github.com/montymi/ClearDocs/issues
+[license-shield]: https://img.shields.io/github/license/montymi/ClearDocs.svg?style=for-the-badge
+[license-url]: https://github.com/montymi/ClearDocs/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/michael-montanaro
