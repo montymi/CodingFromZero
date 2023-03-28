@@ -3,8 +3,7 @@
 #+author: Michael Montanaro
 #+description: The guide I wish was around when I was getting started with coding.
 #+startup: show2levels
-
-:TOC:
+#+TOC: headlines 2
 
 * Level 1: Terminal
 Your terminal/shell is the center for everything in programming. Below is a brief overview of what it is; however, don't get too caught up in the details.
