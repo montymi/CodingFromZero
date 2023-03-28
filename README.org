@@ -47,7 +47,7 @@ To learn more about any of these commands type ~man~ (for manual) followed by th
 - ~cd~ = change directory (argument), move to a different directory
   - /no argument/ = go back to $HOME (root) directory
   - .. = go back *one* folder
-  - /folder_name/ = go up to given folder (<TAB> will show all possible folder options)
+  - /folder_name/ = go up to given folder (~<TAB>~ will show all possible folder options)
 
 - ~mkdir~ = make a directory/folder (argument)
   - /folder_name/ = name of folder to be created, avoid spaces so use either - or _ to combine words
