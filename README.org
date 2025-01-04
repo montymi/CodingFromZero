@@ -4,6 +4,12 @@
 #+description: The guide I wish was around when I was getting started with coding.
 #+startup: show2levels
 
+* Level 0: Introduction
+Follow this guide, level by level, to navigate the initial terminology challenges when learning how to code. Each level is ordered to build on the previous level(s). 
+Various skills are covered, such as bash scripting, python programming, and version control with git. 
+
+If you are here, you have found my repository (folder where code is stored) on Github. Well done and best of luck with the course!
+
 * Level 1: Terminal
 Your terminal/shell is the center for everything in programming. Below is a brief overview of what it is; however, don't get too caught up in the details.
 The main goal of this level is to introduce you to some concepts and vocab, but everything that is "need to know" is found in [[#project-1][Project 1]].
