@@ -17,19 +17,19 @@ It is your computer if not for the GUI (ie. apps), everything you see on your sc
 There are many "flavors" of languages used to navigate the shell, most notably: zsh, bash, fish, and shell. However, they are all fairly similar.
 
 Any code run on your computer, in any location, is run through a terminal. This includes the IDE shells, more about that later.
-Navigating through the shell to reach certain directories (folders) and edit/run files take few commands, but the terminal is extremely powerful and useful.
+Navigating through the shell to reach certain directories (folders) and edit/run files takes few commands, but the terminal is extremely powerful and useful.
 
 Advanced use of the terminal can allow for quick searches through entire directory paths.
 An example of which is if you start a search at the $HOME or the base of your computer, it will search every file in your computer.
 That knowledge will come with time, for now, you will focus on terminology and then a few minor commands.
 
 ** Terminology
-- directory = folder
+- directory = repository = folder
   - parent = first/main folder
   - child = folders after parent
     - (1,2,3...n)th child = how many levels deep into the parent directory the child is
       
-- command line (CLI) = location to input commands to the terminal
+- command line interface (CLI) = location to input commands to the terminal
   
 - text editor = tool used to edit a file (people are *very* passionate about their editor)
 
@@ -43,40 +43,37 @@ That knowledge will come with time, for now, you will focus on terminology and t
 - $SHELL = variable that stores the current shell scripting language (as mentioned above) being used in the terminal
   
 ** Key Commands
-While reading below, if (argument) is in the definition of a command, any nested text will be the possible text to add after the command.
-If tab complete (marked as (TC)) is in definiction of a command, then the (argument) of the command can be filled or listed using the ~<TAB>~ key
-
-To learn more about any of these commands type ~man~ (for manual) followed by the command or type the command followed by --help. To exit the screen that pops up, type ~q~.
+To learn more about any of these commands type ~man~ (for manual) followed by the command or type the command followed by --help. To exit the screen that pops up, type ~q~. When running each service below, ~<TAB>~ will show all possible folder or file options that are compatible with the selected command.
 
 - ~pwd~ = print working/current directory, it shows which folder you are in
 
-- ~cd~ = change directory (argument), move to a different directory
+- ~cd~ = change directory, move to a different directory
   - /no argument/ = go back to $HOME (root) directory
   - .. = go back *one* folder
-  - /folder_name/ = go up to given folder (~<TAB>~ will show all possible folder options)
+  - /folder_name/ = go up to given folder
 
-- ~mkdir~ = make a directory/folder (argument)
+- ~mkdir~ = make a directory/folder 
   - /folder_name/ = name of folder to be created, avoid spaces so use either - or _ to combine words
 
-- ~ls~ = list contents of directory (argument)
+- ~ls~ = list contents of directory
   - ~-a~ = show hidden files (anyting starting with a ".") as well
   - ~-l~ = make everything neater and in a list
   - ~-la~ = combination of both above commands (*used most often*)
 
-- ~vi~, ~vim~, or ~nano~ = terminal based text editors (argument) (TC)
+- ~vi~, ~vim~, or ~nano~ = terminal based text editors
   - /name_of_file/ = opens that file for editing if it exists, creates a new file if it does not
 
-- ~cat~ = prints out the contents of a file (argument) (TC)
+- ~cat~ = prints out the contents of a file 
   - /name_of_file/ = file whose contents will be outputted
 
-- ~touch~ = create a file without opening it (argument)
+- ~touch~ = create a file without opening it 
   - /name_of_file/ = file to be created
 
-- ~open~ = opens a file in prefered application (argument)
+- ~open~ = opens a file in prefered application
   - /name_of_file/ = opens file in prefered GUI text editor or the TextEdit application
   - /url/ = opens the webpage in prefered browser
 
-- ~echo~ = print argument to terminal (argument)
+- ~echo~ = print argument to terminal
   - "text" = prints text to terminal
   - /variable/ = prints variable (such as contents of $HOME, $PATH, $SHELL) to terminal
 
@@ -105,10 +102,10 @@ Most IDEs also allow for customizability with a plethora of plugins or editable 
 For now, picking a simple IDE that contains the necessary features to begin your coding journey is all that you will need for this course.
 ** Applications
 *** Visual Studio Code
-(aka VS Code) My personal choice for application based IDE. The open-source code editor developed by Microsoft,
+My personal choice for application based IDE. The open-source code editor developed by Microsoft,
 is a modern, feature-rich code editor that is suitable for a wide range of programming languages and platforms.
 
-The main *goal* of VS Code is customizability, which allows the user to create a completely unique work environment
+The main *goal* of Visual Studio is customizability, which allows the user to create a completely unique work environment
 with a very small learning curve because of its modern, clean, and organized user interface.
 **** Pros
 - Wide range of extensions and plugins
@@ -122,8 +119,7 @@ with a very small learning curve because of its modern, clean, and organized use
 - Slower than other options
 - Can become fairly computer resource intensive (depending on how many plugins)
 *** Sublime Text
-My first ever IDE. It focuses on performance which makes it a lot faster and more lightweight than VS Code.
-Similar, but less extensive, customizability options to VS Code.
+My first ever IDE. It focuses on performance which makes it a lot faster and more lightweight than Visual Studio Code, with less extensive customizability options.
 
 The main *goal* of Sublime Text is performance coupled with a minimalist interface, removing distractions and allowing for a clean work environment.
 **** Pros
@@ -135,11 +131,11 @@ The main *goal* of Sublime Text is performance coupled with a minimalist interfa
 - UI customization
 - Multi-line selection
 **** Cons
-- Smaller package pool
+- Smaller package size
 - Less built in features
-- Not too commonly used anymore
+- Not too common anymore
 *** PyCharm
-Never personally used, but used by many colleagues. To put it simply, PyCharm is VS Code but optimized to function at the speed of Sublime Text.
+Never personally used, but used by many colleagues. To put it simply, PyCharm is Visual Studio Code but optimized to function at the speed of Sublime Text.
 Although this may sound ideal, it is rare that you code in one language for your entire career. This means that most PyCharm programmers have to use
 language specific IDEs, slowing down work flow and rendering the customizability of PyCharm useless.
 
@@ -197,9 +193,10 @@ It is known for its user-friendly interface, which makes it accessible for users
 - Download/install any of the above options
   - If you want to use the terminal-based text editors, message me so I can get it set up for you
 - Links to downloads:
-  + VS Code: https://code.visualstudio.com/download
+  + Visual Studio Code: https://code.visualstudio.com/download
   + Sublime Text: https://www.sublimetext.com/download
-  + PyCharm: https://www.jetbrains.com/pycharm/download/#section=mac
+  + PyCharm: https://www.jetbrains.com/pycharm/download/
+  + LazyVim (pre-build Neovim setup): https://www.lazyvim.org/
 *** Prompt
 - Successfully open the ~hello.py~ file nested under coding/python-testing that was created in Project 1
 - Add the following to the file:
@@ -589,7 +586,7 @@ print(f"The randomly generated number is: {random_number}")
 Terminal:
 #+begin_src shell
 cd ~/coding/python-testing # change to python-testing directory
-touch project3.py # create projec3.py file
+touch project3.py # create project3.py file
 
 # edit the file in your text editor/IDE of choice
 #+end_src
@@ -637,10 +634,10 @@ cd ~/.ssh
 ssh-keygen -t ed25519 -C "comment"
 #+end_src
 
-     - It will prompt you for what file name to put it into, write ~personal~
-     - It will also ask for a password, it is not necessary to add one
+   + It will prompt you for what file name to put it into, write ~personal~
+   + It will also ask for a password, it is not necessary to add one
    + Copy the contents of the ~personal.pub~ file
-#begin_src shell
+#+begin_src shell
 cat ~/.ssh/personal.pub
 #+end_src
 
